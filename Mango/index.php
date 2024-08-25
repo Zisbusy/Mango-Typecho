@@ -11,3 +11,9 @@
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $this->need('header.php');
 ?>
+<!-- banner -->
+<?php $this->need('/inc/banner.php'); ?>
+
+
+<!-- 页底信息 -->
+<?php $this->need('footer.php'); ?>
