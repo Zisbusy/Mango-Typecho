@@ -8,7 +8,7 @@ function themeConfig($form) {
   $bannerData = new Typecho_Widget_Helper_Form_Element_Textarea(
     'bannerData', 
     null, 
-    '干净通透的沉浸式工作台#/usr/themes/Mango/assets/banner/1.jpg#/;
+    '沉浸式工作台#/usr/themes/Mango/assets/banner/1.jpg#/;
 双眼放空想象一下#/usr/themes/Mango/assets/banner/2.jpg#/;', 
     _t('Banner 数据'), 
     _t('按要求填写 Banner, 数据格式:文字#图片路径#跳转链接;...; (不填写或填写错误时 Banner 会隐藏。)'));
