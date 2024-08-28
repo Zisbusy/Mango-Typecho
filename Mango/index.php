@@ -13,7 +13,22 @@ $this->need('header.php');
 ?>
 <!-- banner -->
 <?php $this->need('/inc/banner.php'); ?>
-
-
+<!-- 内容展示 -->
+<section class="index_area">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="post_box">
+                    <?php while($this->next()): ?>
+                      <!-- 文章列表 -->
+                      <?php include('excerpt.php') ?>
+                    <?php endwhile; ?>
+                </div>
+                <?php // get_ds_posts_nav(); ?>
+            </div>
+            <?php // get_sidebar(); ?>
+        </div>
+    </div>
+</section>
 <!-- 页底信息 -->
 <?php $this->need('footer.php'); ?>

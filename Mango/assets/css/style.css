@@ -200,6 +200,7 @@ html.dark::-webkit-scrollbar-thumb{background:#333;}
 .post_images{width:66%;font-size:0;display:table;margin:0px -1% 0px -1%;}
 .post_images a{display:inline-block;border-radius:8px;overflow:hidden;float:left;position:relative;}
 .post_images a b{position:absolute;display:flex;width:100%;height:100%;background:#0000006e;top:0px;left:0px;color:#fff;z-index:1;font-size:20px;justify-content:center;align-items:center;}
+.post_images img {aspect-ratio: 1 / 1;object-fit: cover;}
 .post_img_2 a{width:46%;margin:2%;}
 .post_img_3 a:nth-child(1){width:62.67%;}
 .post_img_3 a{width:29.33%;margin:2%;}

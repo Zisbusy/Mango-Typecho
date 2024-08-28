@@ -4,6 +4,10 @@ function themeConfig($form) {
   $subTitle  = new Typecho_Widget_Helper_Form_Element_Text('subTitle', NULL,'个人博客', _t('网站副标题'), _t('默认内容"个人博客"'));
   $form->addInput($subTitle);
 
+  // 头像
+  $avatar = new Typecho_Widget_Helper_Form_Element_Text('avatar', NULL,'/usr/themes/Mango/assets/img/avatar.jpg', _t('博主头像地址'), _t('默认值 "/usr/themes/Mango/assets/img/avatar.jpg"'));
+  $form->addInput($avatar);
+
   // Banner 设置
   $bannerData = new Typecho_Widget_Helper_Form_Element_Textarea(
     'bannerData', 
