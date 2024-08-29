@@ -18,3 +18,4 @@ function themeConfig($form) {
     _t('按要求填写 Banner, 数据格式:文字#图片路径#跳转链接;...; (不填写或填写错误时 Banner 会隐藏。)'));
   $form->addInput($bannerData);
 }
+?>
