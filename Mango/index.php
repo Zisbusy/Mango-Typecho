@@ -19,10 +19,8 @@ $this->need('header.php');
         <div class="row g-4">
             <div class="col-lg-8">
                 <div class="post_box">
-                    <?php while($this->next()): ?>
                       <!-- 文章列表 -->
-                      <?php include('excerpt.php') ?>
-                    <?php endwhile; ?>
+                      <?php $this->need('/inc/excerpt.php'); ?>
                 </div>
                 <?php // get_ds_posts_nav(); ?>
             </div>
