@@ -1,6 +1,5 @@
 <?php
   function processImage($originalImageUrl,$targetWidth,$targetHeight) {
-    
     // 获取 Typecho 配置项目
     $options = Typecho_Widget::widget('Widget_Options');
 
