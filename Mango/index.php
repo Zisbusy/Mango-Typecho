@@ -28,6 +28,8 @@ $this->need('header.php');
               <div class="sidebar_sticky">
                 <!-- 热门文章 -->
                 <?php $this->need('/inc/widget/widget-hotpost.php'); ?>
+                <!-- 热门标签 -->
+                <?php $this->need('/inc/widget/widget-tags.php'); ?>
               </div>
             </div>
         </div>
