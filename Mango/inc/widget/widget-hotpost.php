@@ -20,7 +20,7 @@ function getFirstImageContent($html) {
 }
 ?>
 
-<aside id="hot_posts-2" class="widget widget_hot_posts">
+<aside class="widget widget_hot_posts">
   <h3 class="widget-title">热门文章</h3>
   <ul class="widget_hot_post">
   <?php $this->widget('Widget_Contents_Post_Comments','pageSize=3')->to($Comments);while($Comments->next()): ?>
