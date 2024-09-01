@@ -30,7 +30,7 @@ $this->need('header.php');
                 <?php $this->need('/inc/widget/widget-hotpost.php'); ?>
                 <!-- 热门标签 -->
                 <?php $this->need('/inc/widget/widget-tags.php'); ?>
-                <!-- 热门评论 -->
+                <!-- 最近评论 -->
                 <?php $this->need('/inc/widget/widget-comments.php'); ?>
               </div>
             </div>
