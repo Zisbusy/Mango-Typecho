@@ -307,7 +307,7 @@ html.dark::-webkit-scrollbar-thumb{background:#333;}
 /*widget hot_post*/
 .widget_hot_post{}
 .widget_hot_post .widget_hot_li{display:flex;align-items:center;margin-bottom:20px;position:relative;}
-.widget_hot_post .widget_hot_li img{width:75px;margin-right:15px;flex-shrink:0;border-radius:4px;}
+.widget_hot_post .widget_hot_li img{width:75px;margin-right:15px;flex-shrink:0;border-radius:4px;aspect-ratio: 10 / 7;object-fit: cover;}
 .widget_hot_post .widget_hot_li .hot_post_info{}
 .widget_hot_post .widget_hot_li .hot_post_info h4{font-size:13px;display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:2;margin-bottom:5px;font-weight:inherit;}
 .widget_hot_post .widget_hot_li .hot_post_info h4 a{}
