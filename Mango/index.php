@@ -18,13 +18,18 @@ $this->need('header.php');
     <div class="container">
         <div class="row g-4">
             <div class="col-lg-8">
-                <div class="post_box">
-                      <!-- 文章列表 -->
-                      <?php $this->need('/inc/excerpt.php'); ?>
-                </div>
-                <?php // get_ds_posts_nav(); ?>
+              <div class="post_box">
+                <!-- 文章列表 -->
+                <?php $this->need('/inc/excerpt.php'); ?>
+              </div>
+              <?php // get_ds_posts_nav(); ?>
             </div>
-            <?php // get_sidebar(); ?>
+            <div class="col-lg-4">
+              <div class="sidebar_sticky">
+                <!-- 热门文章 -->
+                <?php $this->need('/inc/widget/widget-hotpost.php'); ?>
+              </div>
+            </div>
         </div>
     </div>
 </section>
