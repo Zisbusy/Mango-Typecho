@@ -30,12 +30,13 @@
       return $originalImageUrl;
     }
     
-    // 判断路径是否为 typecho /usr/uploads/ 的图片，决定文件保存目录。
     // 修改图片路径、后缀名用于生成新图片、匹配缓存。
+    $temPath = substr($originalImagePath, 0, strrpos($originalImagePath, '.')) .'-'.$targetWidth.'x'.$targetHeight.'.webp';
+    // 判断路径是否为 typecho /usr/uploads/ 的图片，决定文件保存目录。
     if (strpos($originalImagePath, '/usr/uploads/') === 0) {
-      $thumbImagePath = str_replace('uploads', 'thumb', substr($originalImagePath, 0, strrpos($originalImagePath, '.')) . '.webp');
+      $thumbImagePath = str_replace('uploads', 'thumb', $temPath);
     } else {
-      $thumbImagePath = '/usr/thumb/other' . substr($originalImagePath, 0, strrpos($originalImagePath, '.')) . '.webp';
+      $thumbImagePath = '/usr/thumb/other' . $temPath;
     }
     $thumbImageURL = $options->siteUrl . $thumbImagePath;
     $localThumbImagePath = __TYPECHO_ROOT_DIR__ . $thumbImagePath;
