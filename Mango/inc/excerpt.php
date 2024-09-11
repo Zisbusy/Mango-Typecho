@@ -1,4 +1,3 @@
-<?php $this->need('/inc/thumb.php'); ?>
 <?php while($this->next()): ?>
   <div class="post_loop">
     <div class="post_loop_head">
