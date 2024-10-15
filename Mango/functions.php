@@ -34,5 +34,5 @@ function themeConfig($form) {
 }
 
 // 图片压缩
-$this->need('/inc/thumb.php');
+require_once('inc/thumb.php');
 ?>
