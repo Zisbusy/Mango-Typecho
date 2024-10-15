@@ -5,7 +5,7 @@ function themeConfig($form) {
   $form->addInput($subTitle);
 
   // 头像
-  $avatar = new Typecho_Widget_Helper_Form_Element_Text('avatar', NULL,'/usr/themes/Mango/assets/img/avatar.jpg', _t('博主头像地址'), _t('默认值 "/usr/themes/Mango/assets/img/avatar.jpg"'));
+  $avatar = new Typecho_Widget_Helper_Form_Element_Text('avatar', NULL,'/usr/themes/Mango/assets/img/avatar.webp', _t('博主头像地址'), _t('默认值 "/usr/themes/Mango/assets/img/avatar.webp"'));
   $form->addInput($avatar);
 
   // Banner 设置
