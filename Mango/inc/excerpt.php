@@ -51,13 +51,7 @@
           <?php endforeach; ?>
         </div>
         <!-- 标签 -->
-        <div class="post_loop_tag">
-          <?php if (count($this->tags) > 0): ?>
-            <em>
-              <i class="bi bi-hash"></i><?php $this->tags ('</em><em><i class="bi bi-hash"></i>', true, 'none'); ?>
-            </em>
-          <?php endif; ?>
-        </div>
+        <?php $this->need('/inc/tag.php'); ?>
         <!-- 文章信息 -->
         <div class="post_info_footer">
             <span class="">
