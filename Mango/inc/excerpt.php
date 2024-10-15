@@ -19,7 +19,7 @@
             <h2 class="post_loop_title">
               <a class="stretched-link" href="<?php $this->permalink() ?>" title="<?php $this->title() ?>"><?php $this->title() ?></a>
             </h2>
-            <p><?php $this->excerpt(70, '...'); ?></p>
+            <p><?php $this->excerpt(80, '...'); ?></p>
         </div>
         <!-- 图片集合 -->
         <?php
