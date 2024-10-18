@@ -333,7 +333,7 @@ html.dark::-webkit-scrollbar-thumb{background:#333;}
 .author_show_box .author_show_info span b{font-weight:inherit;}
 .author_post{padding:20px 22px 0px 22px;border-top:1px solid #f6f5f5;}
 .author_post li{display:flex;align-items:center;margin-bottom:20px;position:relative;}
-.author_post li img{width:75px;margin-right:15px;flex-shrink:0;border-radius:4px;}
+.author_post li img{width:75px;margin-right:15px;flex-shrink:0;border-radius:4px;aspect-ratio: 10 / 7;object-fit: cover;}
 .author_post li .author_title{}
 .author_post li .author_title h4{font-size:13px;display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:2;margin-bottom:5px;font-weight:inherit;}
 .author_post li .author_title h4 a{}
