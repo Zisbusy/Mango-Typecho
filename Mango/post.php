@@ -38,57 +38,19 @@
       <!-- 侧边信息 -->
       <div class="col-lg-4">
         <div class="sidebar_sticky">
-        <div class="author_show_box">
-            <div class="author_show_head">
-                <img alt="" src="<?php $this->options->avatar(); ?>" class="avatar avatar-80 photo" height="80" width="80" loading="lazy" decoding="async">
-                <h3><?php $this->author(); ?></h3>
-                <p>站在巨人的肩膀上而已</p>
-            </div>
-            <div class="author_show_info">
-                <span><i class="bi bi-book"></i><b>文章</b>8</span>
-                <span><i class="bi bi-chat-square-dots"></i><b>评论</b>3</span>
-            </div>
-
-        <ul class="author_post">
-
-        <li>
-            <img width="400" height="280" src="https://mango.huitheme.cn/wp-content/cache/thumbnails/2022/09/2022092314502441-400x280-c.webp" class="attachment-400x280x1 size-400x280x1 wp-post-image" alt="" decoding="async" loading="lazy">            <div class="author_title">
-                <h4><a class="stretched-link" href="https://mango.huitheme.cn/1437.html">也许是最实用的万兆NAS  超长文分页</a></h4>
-                <p>16条留言</p>
-            </div>
-        </li>
-
-    
-
-        <li>
-          <img width="400" height="280" src="https://mango.huitheme.cn/wp-content/cache/thumbnails/2022/09/2022092305140523-400x280-c.jpg" class="attachment-400x280x1 size-400x280x1 wp-post-image" alt="" decoding="async" loading="lazy">            <div class="author_title">
-          <h4><a class="stretched-link" href="https://mango.huitheme.cn/1300.html">对隐茶书房</a></h4>
-          <p>18条留言</p>
-          </div>
-        </li>
-
-    
-
-        <li>
-            <img width="400" height="280" src="https://mango.huitheme.cn/wp-content/cache/thumbnails/2022/09/2022092304413371-400x280-c.webp" class="attachment-400x280x1 size-400x280x1 wp-post-image" alt="" decoding="async" loading="lazy">            <div class="author_title">
-                <h4><a class="stretched-link" href="https://mango.huitheme.cn/1121.html">干净通透的沉浸式工作台[文章分页效果]</a></h4>
-                <p>13条留言</p>
-            </div>
-        </li>
-
-    </ul>
-  </div>
-
-    <!-- 热门标签 -->
-    <?php $this->need('/inc/widget/widget-tags.php'); ?>
-        
-        
-        
+          <!-- 作者信息 -->
+          <?php $this->need('/inc/widget/author-show.php'); ?>
+          <!-- 热门标签 -->
+          <?php $this->need('/inc/widget/widget-tags.php'); ?>
         </div>
-</div>
-        </div>
+      </div>
 
+
+
+      
     </div>
+
+</div>
 </section>
 
 
