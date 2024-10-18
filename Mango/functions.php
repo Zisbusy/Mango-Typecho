@@ -8,6 +8,10 @@ function themeConfig($form) {
   $avatar = new Typecho_Widget_Helper_Form_Element_Text('avatar', NULL,'/usr/themes/Mango/assets/img/avatar.webp', _t('博主头像地址'), _t('默认值 "/usr/themes/Mango/assets/img/avatar.webp"'));
   $form->addInput($avatar);
 
+  // 个人介绍
+  $introduce = new Typecho_Widget_Helper_Form_Element_Text('introduce', NULL,'站在巨人的肩膀上而已', _t('个人介绍'), _t('首页公告内容'));
+  $form->addInput($introduce);
+
   // Banner 设置
   $bannerData = new Typecho_Widget_Helper_Form_Element_Textarea(
     'bannerData', 
