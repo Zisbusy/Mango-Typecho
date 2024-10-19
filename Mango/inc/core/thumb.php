@@ -29,6 +29,13 @@
     if ($imageInfo === false || $imageInfo[2] === IMAGETYPE_GIF) {
       return $originalImageUrl;
     }
+
+    // 当目标宽高有一个为 0 时，保持原图比例
+    if ($targetWidth == 0) {
+        $targetWidth = round($imageInfo[0] * $targetHeight / $imageInfo[1]);
+    } elseif ($targetHeight == 0) {
+        $targetHeight = round($imageInfo[1] * $targetWidth / $imageInfo[0]);
+    }
     
     // 修改图片路径、后缀名用于生成新图片、匹配缓存。
     $temPath = substr($originalImagePath, 0, strrpos($originalImagePath, '.')) .'-'.$targetWidth.'x'.$targetHeight.'.webp';
