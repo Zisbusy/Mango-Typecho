@@ -1,4 +1,4 @@
-<?php $this->need('/inc/hotpost.php'); ?>
+<?php $this->need('/inc/core/hotpost.php'); ?>
 
 <aside class="widget widget_hot_posts">
   <h3 class="widget-title">热门文章</h3>

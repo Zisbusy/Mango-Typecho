@@ -16,7 +16,7 @@
   }
 
   // 热门文章函数
-  $this->need('/inc/hotpost.php');
+  $this->need('/inc/core/hotpost.php');
 ?>
 
 <div class="author_show_box">
