@@ -22,7 +22,8 @@ $this->need('header.php');
                 <!-- 文章列表 -->
                 <?php $this->need('/inc/excerpt.php'); ?>
               </div>
-              <?php // get_ds_posts_nav(); ?>
+              <!-- 文章翻页 -->
+              <?php $this->need('/inc/flip.php'); ?>
             </div>
             <div class="col-lg-4">
               <div class="sidebar_sticky">
