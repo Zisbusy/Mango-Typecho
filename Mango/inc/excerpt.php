@@ -44,7 +44,7 @@
               <?php 
                 // 只显示9张图片，超出的标注在最后一张图上。  
                 if ($index == 8 && $imagesNum > 9) {
-                  echo '<b>+' . $imagesNum - 9 . '</b></a>';
+                  echo '<b>+' . ($imagesNum - 9) . '</b></a>';
                   break;
                 }
               ?>
