@@ -22,7 +22,7 @@
             <?php echo wrapImagesInLinks($this->content,$this->title); ?>
           </article>
           <!-- 标签 -->
-          <?php $this->need('/inc/tag.php'); ?>
+          <?php $this->need('inc/tag.php'); ?>
         </div>
         <!-- 文章底部作者信息 -->
         <div class="post_author">
@@ -43,9 +43,9 @@
       <div class="col-lg-4">
         <div class="sidebar_sticky">
           <!-- 作者信息 -->
-          <?php $this->need('/inc/widget/author-show.php'); ?>
+          <?php $this->need('inc/widget/author-show.php'); ?>
           <!-- 热门标签 -->
-          <?php $this->need('/inc/widget/widget-tags.php'); ?>
+          <?php $this->need('inc/widget/widget-tags.php'); ?>
         </div>
       </div>
 
