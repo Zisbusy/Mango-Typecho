@@ -1,4 +1,4 @@
-<?php if(!empty($this->options->other) && in_array('flipajax', $this->options->other)): ?>
+<?php if(!empty($this->options->other) && in_array('openAjax', $this->options->other)): ?>
   <div class="post-read-more">
     <?php $this->pageLink('加载更多','next'); ?>
   </div>
