@@ -374,7 +374,7 @@ html.dark::-webkit-scrollbar-thumb{background:#333;}
     .post_related_list a{font-size:13px;}
 }
 .post-read-more{text-align:center;margin-bottom:20px;}
-.post-read-more a{background:#fff;padding:11px 0px;display:block;color:#919191;font-size:13px;}
+.post-read-more a{background:#fff;padding:11px 0px;display:block;color:#919191;font-size:13px;border-radius: 10px;}
 .post-read-more a.loading{background:#4270f5;color:#fff;}
 .posts-nav{text-align:center;margin:40px 0px;}
 .posts-nav .page-numbers{padding:5px 10px;background:#fff;display:inline-block;color:#555;font-size:12px;margin:0px 2px;}
