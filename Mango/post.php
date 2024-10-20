@@ -1,7 +1,5 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <?php $this->need('header.php'); ?>
-<!-- img 标签处理 -->
-<?php $this->need('inc/core/fancyimg.php'); ?>
 <!-- 文章页面 -->
 <section class="index_area">
   <div class="container">
