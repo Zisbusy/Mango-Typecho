@@ -1,3 +1,4 @@
+<div class="post_box">
 <?php while($this->next()): ?>
   <div class="post_loop">
     <div class="post_loop_head">
@@ -69,3 +70,4 @@
     </div>
   </div>
 <?php endwhile; ?>
+</div>
