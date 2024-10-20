@@ -18,10 +18,8 @@ $this->need('header.php');
     <div class="container">
         <div class="row g-4">
             <div class="col-lg-8">
-              <div class="post_box">
-                <!-- 文章列表 -->
-                <?php $this->need('/inc/excerpt.php'); ?>
-              </div>
+              <!-- 文章列表 -->
+              <?php $this->need('/inc/excerpt.php'); ?>
               <!-- 文章翻页 -->
               <?php $this->need('/inc/flip.php'); ?>
             </div>
