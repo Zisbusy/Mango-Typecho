@@ -26,7 +26,7 @@ function themeConfig($form) {
   if(function_exists('gd_info')){
     $thumbOption = new Typecho_Widget_Helper_Form_Element_Radio('thumbOption',
     array(true => '开启',false => '关闭',),
-    false, _t('生成缩略图'), _t('首页文章列表图片会替换为小尺寸的缩略图，目录: usr/thumb ，其余路径、文件名与 uploads 保持一致。<br />请提前将 usr 目录权限设置为 777 。<br />注意：首次访问时需要生成缩略图，加载时间会比较长。'));
+    false, _t('生成缩略图'), _t('为文章列表与文章里图片生成小尺寸的缩略图，可显著提高加载速度，节省服务器带宽。目录: usr/thumb ，其余路径、文件名与 uploads 保持一致。<br />请提前将 usr 目录权限设置为 777 。<br />注意：首次访问时需要生成缩略图，加载时间会比较长。'));
     $form->addInput($thumbOption);
   }else {
     $thumbOption = new Typecho_Widget_Helper_Form_Element_Radio('thumbOption',
