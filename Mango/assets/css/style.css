@@ -64,6 +64,10 @@ html.dark::-webkit-scrollbar-thumb{background:#333;}
 .dark .post-read-more a:hover{background:#4270f5;color:#fff;}
 .dark .posts-nav .page-numbers{background:#2a2a2b;color:#fff;}
 .dark .posts-nav .page-numbers:hover{background:#4270f6;}
+.dark .posts-nav a,
+.dark .posts-nav span {background: #2a2a2b;color: #fff;}
+.dark .posts-nav a:hover,
+.dark .posts-nav span:hover{background: #4270f6;}
 .dark .posts-nav .current{background:#4270f6;}
 .dark #comments .comments-title{border-bottom:2px solid #222222;}
 .dark #comments .comment-list li .comment-body{border-bottom:1px solid #222222;}
@@ -376,6 +380,10 @@ html.dark::-webkit-scrollbar-thumb{background:#333;}
 .posts-nav .page-numbers{padding:5px 10px;background:#fff;display:inline-block;color:#555;font-size:12px;margin:0px 2px;}
 .posts-nav .page-numbers:hover,
 .posts-nav .page-numbers.current{background:#4270f6;color:#fff;}
+.posts-nav a,
+.posts-nav span{padding: 5px 10px;background: #fff;display: inline-block;color: #555;font-size: 12px;margin: 0px 2px;border-radius: 5px;}
+.posts-nav a:hover,
+.posts-nav span:hover{background: #4270f6;color: #fff;}
 
 /*next_prev_posts*/
 .next_prev_posts{display:table;width:100%;margin-bottom:20px;}
