@@ -47,4 +47,6 @@ function themeConfig($form) {
 
 // 图片压缩
 require_once('inc/core/thumb.php');
+// img 标签处理
+require_once('inc/core/fancyimg.php');
 ?>
