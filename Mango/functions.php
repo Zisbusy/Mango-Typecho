@@ -37,11 +37,11 @@ function themeConfig($form) {
   
   $other = new Typecho_Widget_Helper_Form_Element_Checkbox('other', 
     array(
-    'shownav' => _t('顶部导航固定悬浮'),
-    'flipajax' => _t('使用ajax加载文章'),
-    'autodark' => _t('开启夜间模式(跟随系统)'),
+    'showNav' => _t('顶部导航固定悬浮'),
+    'openAjax' => _t('使用ajax加载文章'),
+    'autoDark' => _t('开启夜间模式(跟随系统)'),
     ),
-    array('flipajax','autodark'), _t('其他设置'));
+    array('showNav','openAjax','autoDark'), _t('其他设置'));
   $form->addInput($other->multiMode());
 }
 
