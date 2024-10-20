@@ -46,7 +46,7 @@
 
 <body>
   <style>:root{--ds_background:url(/usr/themes/Mango/assets/img/background.svg)}</style>
-  <header class="header sticky-top">
+  <header class="header<?php if(!empty($this->options->other) && in_array('showNav', $this->options->other)) {echo ' sticky-top';}?>">
     <div class="container">
       <div class="top">
         <!-- 手机端菜单按钮 -->
