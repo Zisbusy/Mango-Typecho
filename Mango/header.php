@@ -63,7 +63,7 @@
           <nav class="header-menu">
             <ul class="header-menu-ul">
               <li><a href="/">首页</a></li>
-              <?php $this->need('/inc/nav.php'); ?>
+              <?php $this->need('inc/nav.php'); ?>
             </ul>
           </nav>
         </div>
@@ -101,7 +101,7 @@
       <!-- 手机导航栏 -->
       <div id="sjcldnav">
         <ul class="menu-zk">
-          <?php $this->need('/inc/nav.php'); ?>
+          <?php $this->need('inc/nav.php'); ?>
         </ul>
       </div>
   </div>
