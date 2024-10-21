@@ -12,7 +12,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $this->need('header.php');
 ?>
 <!-- banner -->
-<?php $this->need('inc/banner.php'); ?>
+<?php if($this->is('index')){$this->need('inc/banner.php');} ?>
 <!-- 内容展示 -->
 <section class="index_area">
     <div class="container">
