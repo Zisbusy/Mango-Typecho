@@ -39,9 +39,8 @@ function themeConfig($form) {
     array(
     'showNav' => _t('顶部导航固定悬浮'),
     'openAjax' => _t('使用ajax加载文章'),
-    'autoDark' => _t('开启夜间模式(跟随系统)'),
     ),
-    array('showNav','openAjax','autoDark'), _t('其他设置'));
+    array('showNav','openAjax'), _t('其他设置'));
   $form->addInput($other->multiMode());
 }
 
