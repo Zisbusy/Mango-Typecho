@@ -1,23 +1,30 @@
 // 变黑函数
 function setDark() {
-  localStorage.setItem("isDarkMode", "1");
   document.documentElement.classList.add("dark");
+  if (darkModeMediaQuery.matches) {
+    localStorage.removeItem("isDarkMode")
+  } else {
+    localStorage.setItem("isDarkMode", "1");
+  }
 }
 // 变白函数
 function removeDark() {
-  localStorage.setItem("isDarkMode", "0");
   document.documentElement.classList.remove("dark");
+  if (!darkModeMediaQuery.matches) {
+    localStorage.removeItem("isDarkMode")
+  } else {
+    localStorage.setItem("isDarkMode", "0");
+  }
 }
-// switch按钮
+// 切换按钮
 function switchDarkMode() {
-  let isDark = localStorage.getItem("isDarkMode");
-  if (isDark == '1') {
+  // 检查 <html> 元素是否包含 'dark' 类名
+  if (document.documentElement.classList.contains('dark')) {
     removeDark();
   } else {
     setDark();
   }
 }
-
 
 
 jQuery(document).ready(function($){
