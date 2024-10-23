@@ -1,10 +1,42 @@
 <!doctype html>
 <script>
-  const isDark= localStorage.getItem("isDarkMode");
-  if(isDark==="1"){
-    document.documentElement.classList.add('dark');
-  }else{
-    document.documentElement.classList.remove('dark');
+  // 创建一个 MediaQueryList 对象，获取系统偏好设置。
+  const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+  // 获取本地有没有存储值。
+  const isDark = localStorage.getItem("isDarkMode");
+
+  // 判断有无手动选择状态。
+  if (isDark === null) {
+    // 无手动选择状态，应用系统偏好设置。
+    handleDarkModeChange(darkModeMediaQuery);
+  } else {
+    // 根据用户偏好切换，当前状态与用户偏好一致时清除本地存储值。
+    if (isDark==="1") {
+      document.documentElement.classList.add('dark');
+      if (darkModeMediaQuery.matches) {
+        localStorage.removeItem("isDarkMode")
+      }
+    } else {
+      document.documentElement.classList.remove('dark');
+      if (!darkModeMediaQuery.matches) {
+        localStorage.removeItem("isDarkMode")
+      }
+    }
+  }
+  
+  // 添加监听器以响应系统实时变化。
+  darkModeMediaQuery.addEventListener('change', handleDarkModeChange);
+  // 处理系统实时变化，根据系统设置切换。
+  function handleDarkModeChange(e) {
+    if (e.matches) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    // 清理手动选择状态
+    if (localStorage.getItem("isDarkMode") !== null) {
+      localStorage.removeItem("isDarkMode")
+    }
   }
 </script>
 <html lang="zh-CN">
