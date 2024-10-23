@@ -23,9 +23,9 @@ html.dark::-webkit-scrollbar-thumb{background:#333;}
 }
 .dark .top .top_r .top_r_an.theme-switch{color:#ffc008;background:#212121;}
 .dark .top .top_r .top_r_an:hover{background:#212121;}
-.dark body{background-color:#191919;color:#c9c9c9;background-blend-mode:color-burn;}
+.dark body{background-color:#191919;color:#c9c9c9;background-blend-mode:overlay;}
 .dark a{color:#ffffff;}
-.dark .header{background:rgb(35 35 35 / 80%);}
+.dark .header{background:rgb(35 35 35 / 80%);box-shadow: unset;}
 .dark .top .top_r .top_r_an{color:#bdbdbd;}
 .dark .mobile_an{color:#bdbdbd;}
 .dark #mobile_right_nav .mobile_head{background:#1c1b1b;}
