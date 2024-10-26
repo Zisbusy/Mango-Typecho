@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <script>
   // 创建一个 MediaQueryList 对象，获取系统偏好设置。
   const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
