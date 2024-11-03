@@ -59,7 +59,7 @@
               <i class="bi bi-chat-square-text-fill"></i>
               <?php $this->commentsNum('0评论', '1评论', '%d评论'); ?>
             </span>
-            <span class=""><i class="bi bi-eye-fill"></i>5,788浏览</span>
+            <span class=""><i class="bi bi-eye-fill"></i><?php echo Postviews($this);?>浏览</span>
             <span>
               <a href="javascript:;" data-action="ding" data-id="1437" class="specsZan ">
                   <i class="bi bi-heart-fill"></i>
