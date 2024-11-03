@@ -48,4 +48,6 @@ function themeConfig($form) {
 require_once('inc/core/thumb.php');
 // img 标签处理
 require_once('inc/core/fancyimg.php');
+//阅读次数统计
+require_once('inc/core/views.php');
 ?>
