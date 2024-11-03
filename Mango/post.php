@@ -10,7 +10,7 @@
           <h1><?php $this->title() ?></h1>
           <p>
             <span><i class="bi bi-clock"></i><?php $this->dateWord(); ?></span>
-            <span><i class="bi bi-eye"></i>2,908</span>
+            <span><i class="bi bi-eye"></i><?php echo Postviews($this);?></span>
             <span><i class="bi bi-chat-square-text"></i>18</span>
           </p>
         </div>
