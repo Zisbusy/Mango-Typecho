@@ -19,13 +19,18 @@
 </section>
 
 <footer class="footbox">
-    <div class="container">
-    	<div class="copyright">
-    		<p>©️ <?php echo date("Y");?> Mango All Rights Reserved. Powered by <a href="https://www.huitheme.com/" target="_blank">Typecho</a>
-	    						<a class="beian" href="https://beian.miit.gov.cn/" rel="external nofollow" target="_blank" title="备案号"><i class="bi bi-shield-check me-1"></i>苏ICP备123456号</a>
-					    	</p>
-    	</div>
-	</div>
+  <div class="container">
+    <div class="copyright">
+      <p>©️ <?php echo date("Y");?> Mango All Rights Reserved. Powered by <a href="https://typecho.org/" rel="external nofollow noopener noreferrer"  target="_blank">Typecho</a>
+        <?php if ($this->options->ICP): ?>
+          <a class="beian" href="https://beian.miit.gov.cn/" rel="external nofollow noopener noreferrer" target="_blank" title="备案号">
+            <i class="bi bi-shield-check me-1"></i>
+            <?php $this->options->ICP();?>
+          </a>
+        <?php endif; ?>
+      </p>
+    </div>
+  </div>
 </footer>
 
 <button class="scrollToTopBtn" title="返回顶部"><i class="bi bi-chevron-up"></i></button>
