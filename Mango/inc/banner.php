@@ -9,7 +9,7 @@
   $parsedData = array();
   // 验证并解析数据
   foreach ($entries as $entry) {
-    // 使用逗号作为分隔符分割条目
+    // 使用 # 作为分隔符分割条目
     $parts = explode('#', $entry);
     // 检查是否有三个部分
     if (count($parts) === 3) {
