@@ -54,7 +54,6 @@ html.dark::-webkit-scrollbar-thumb{background:#333;}
 .dark .post_loop .post_loop_conter .post_loop_title_box p {color:#afafaf;}
 .dark .post_author{border-top:3px solid #191919;}
 .dark .post-read-more a{background:#212121;color:#555;}
-.dark .post-read-more a:hover{background:#4270f5;color:#fff;}
 .dark .posts-nav .page-numbers{background:#2a2a2b;color:#fff;}
 .dark .posts-nav .page-numbers:hover{background:#4270f6;}
 .dark .posts-nav a,
