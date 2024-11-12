@@ -238,8 +238,8 @@ html.dark::-webkit-scrollbar-thumb{background:#333;}
 .cat_head{background:#fff;border-radius:10px;padding:20px;margin-bottom:20px;display:flex;flex-direction:row;align-items:center;}
 .cat_head img{border-radius:6px;margin-right:20px;height:70px;width:70px;}
 .cat_head_r{}
-.cat_head_r h2{font-size:18px;}
-.cat_head_r p{margin:0px;color:#adadad;}
+.cat_head_r h2{font-size:18px;margin-bottom: 0;}
+.cat_head_r p{margin:.5rem 0px 0px 0px;color:#adadad;}
 
 /*links*/
 .links{background:#272b30;padding:25px 0px;font-size:12px;text-align:center;}
