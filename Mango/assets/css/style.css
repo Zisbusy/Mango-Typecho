@@ -102,6 +102,8 @@ html.dark::-webkit-scrollbar-thumb{background:#333;}
     .top .top_l .logo{margin-right:0px;}
     .top .top_l .logo a img{height:22px;}
     .top .top_r .top_r_an.theme-switch{display:none;}
+    .header {background:#fff;backdrop-filter:unset;}
+    .dark .header {background:rgb(33 33 33);}
 }
 
 /*nav*/
