@@ -25,6 +25,8 @@ $this->need('header.php');
           <?php $this->need('inc/flip.php'); ?>
         <?php else: ?>    
           <div class="catbox">
+          <!-- 分类、标签、搜索 提示 -->
+          <?php $this->need('inc/cat.php'); ?>
           <!-- 文章列表 -->
           <?php $this->need('inc/excerpt.php'); ?>
           <!-- 文章翻页 -->
