@@ -36,6 +36,7 @@
               $imagesShowNum = 9;
           }
         ?>
+        <?php if($imagesShowNum > 0): ?>
         <div class="post_images post_img_<?php echo $imagesShowNum; ?>">
           <!-- 循环输出图片 -->
           <?php foreach ($images as $index =>  $image): ?>
@@ -51,6 +52,7 @@
             </a>
           <?php endforeach; ?>
         </div>
+        <?php endif; ?>
         <!-- 标签 -->
         <?php $this->need('/inc/tag.php'); ?>
         <!-- 文章信息 -->
