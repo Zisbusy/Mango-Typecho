@@ -35,7 +35,10 @@
             </div>
           </div>
         </div>
-
+        <!-- 上一篇/下一篇文章 -->
+        <?php $this->need('inc/post/posts.php'); ?>
+        <!-- 相关文章 -->
+        <?php $this->need('inc/post/related.php'); ?>
       </div>
       <!-- 侧边信息 -->
       <div class="col-lg-4">
