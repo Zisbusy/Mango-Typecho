@@ -353,7 +353,7 @@ html.dark::-webkit-scrollbar-thumb{background:#333;}
 .post_author_icon a{background:#4270f5;padding:4px 8px;margin:0px 4px;font-style:inherit;border-radius:4px;color:#fff;font-size:12px;display:inline-block;}
 .post_author_icon a:hover{}
 .post_author_icon a i{margin-right:6px;}
-.post_related{background:#fff;padding:30px 30px 15px 30px;border-radius:4px;}
+.post_related{background:#fff;padding:30px 30px 15px 30px;border-radius:10px;}
 .post_related_list{}
 .post_related_list a{display:block;margin-bottom:15px;color:#515151;position:relative;padding-left:15px;}
 .post_related_list a:before{content:"";width:5px;height:5px;border-radius:50%;background-color:#ccc;position:absolute;top:8px;left:0px;}
