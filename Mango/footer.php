@@ -21,7 +21,7 @@
 <footer class="footbox">
   <div class="container">
     <div class="copyright">
-      <p>©️ <?php echo date("Y");?> Mango All Rights Reserved. Powered by <a href="https://typecho.org/" rel="external nofollow noopener noreferrer"  target="_blank">Typecho</a>
+      <p>© <?php echo date("Y");?> Mango All Rights Reserved. Powered by <a href="https://typecho.org/" rel="external nofollow noopener noreferrer"  target="_blank">Typecho</a>
         <?php if ($this->options->ICP): ?>
           <a class="beian" href="https://beian.miit.gov.cn/" rel="external nofollow noopener noreferrer" target="_blank" title="备案号">
             <i class="bi bi-shield-check me-1"></i>
