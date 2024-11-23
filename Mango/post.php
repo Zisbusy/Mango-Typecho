@@ -39,6 +39,10 @@
         <?php $this->need('inc/post/posts.php'); ?>
         <!-- 相关文章 -->
         <?php $this->need('inc/post/related.php'); ?>
+        <!-- 评论 -->
+        <?php $this->need('inc/post/comment.php'); ?>
+
+        
       </div>
       <!-- 侧边信息 -->
       <div class="col-lg-4">
