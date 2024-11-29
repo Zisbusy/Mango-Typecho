@@ -7,7 +7,12 @@
     if (!$options->thumbOption) {
       return $originalImageUrl;
     }
-
+    
+    // 判断文件夹是否存在
+    if (!file_exists(__TYPECHO_ROOT_DIR__ . '/usr/thumb')) {
+      return $originalImageUrl;
+    } 
+    
     // 使用 parse_url 函数来解析 URL 获取图片路径，获取不到直接原样返回。
     $parsedUrl = parse_url($originalImageUrl);
     if (isset($parsedUrl['path'])) {
