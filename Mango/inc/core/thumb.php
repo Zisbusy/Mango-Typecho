@@ -121,7 +121,7 @@
     // 创建必要的目录
     $directory = dirname($localThumbImagePath);
     if (!file_exists($directory)) {
-        mkdir($directory, 0777, true);
+        mkdir($directory, 0755, true);
     }
     
     //调整图片格式、压缩质量。
