@@ -48,6 +48,16 @@ function themeConfig($form) {
   $form->addInput($other->multiMode());
 }
 
+// 修改后台设置以适应模板
+function themeInit($archive){
+  // 将较新的的评论显示在前面
+  Helper::options()->commentsOrder = 'DESC';
+  // 启用评论分页
+  Helper::options()->commentsPageBreak = true;
+  // 评论第一页作为默认显示
+  Helper::options()->commentsPageDisplay = 'first';
+}
+
 // 图片压缩
 require_once('inc/core/thumb.php');
 // img 标签处理
