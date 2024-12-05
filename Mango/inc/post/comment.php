@@ -1,4 +1,6 @@
+<!-- 三方资源 -->
 <link rel='stylesheet' id='ajax-comment-css' href='https://mango.huitheme.cn/wp-content/themes/mango/inc/comment/app.css' type='text/css' media='all' />
+<script type="text/javascript" src="https://mango.huitheme.cn/wp-content/themes/mango/inc/comment/app.js" id="ajax-comment-js"></script>
 
 <?php function threadedComments($comments, $options) { 
   // 评论层数大于0为子级，否则是父级
@@ -6,7 +8,7 @@
 ?>
 <ol class="<?php echo $commentOlClass; ?>">
   <li id="<?php $comments->theId(); ?>" class="comment even thread-even depth-<?php echo ($comments->levels) + 1; ?>">
-    <article id="div-comment-9" class="comment-body">
+    <article id="div-<?php $comments->theId(); ?>" class="comment-body">
       <footer class="comment-meta">
         <div class="comment-author vcard">
           <img alt="<?php $comments->author(false); ?>" src="<?php echo getavatar($comments->mail); ?>" class="avatar avatar-40 photo" height="40" width="40" loading="lazy" decoding="async">
@@ -32,22 +34,12 @@
 </ol>
 <?php } ?>
 
-
-
-
-
-
-
-
-
-
 <div class="post_comment" id="post_comment_anchor">
-	<div id="comments" class="comments-area">
+  <div id="comments" class="comments-area">
     <div class="layoutSingleColumn">
-        
 
 
-  <!-- 回复列表 -->
+  <!-- 评论列表 -->
   <?php $this->comments()->to($comments); ?>
   <?php if ($comments->have()) : ?>
         <!-- 评论的内容 -->
@@ -55,15 +47,16 @@
         <?php $comments->listComments(); ?>
   <?php endif; ?>
 
-
-<div id="respond" class="comment-respond">
+<!-- 评论表单 -->
+<?php if ($this->allow('comment')) : ?>
+<div id="<?php $this->respondId(); ?>" class="comment-respond">
     <h3 id="reply-title" class="comment-reply-title">
         <i class="bi bi-keyboard me-1"></i>发布评论 
         <small>
-            <a rel="nofollow" id="cancel-comment-reply-link" href="/1082.html#respond" style="display:none;">取消回复</a>
+            <?php $comments->cancelReply(); ?>
         </small>
 	</h3>
-    <form action="https://mango.huitheme.cn/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+    <form action="<?php $this->commentUrl() ?>" method="post" id="commentform" class="comment-form">
         <p class="comment-form-comment">
             <textarea id="comment" name="comment" aria-required="true"></textarea>
         </p>
@@ -87,11 +80,11 @@
         </p>
     </form>
   </div>
+<?php endif; ?>
+	    
+
+	    
+
+    </div>
+  </div>
 </div>
-</div>
-
-</div>
-
-
-
-<script type="text/javascript" src="https://mango.huitheme.cn/wp-content/themes/mango/inc/comment/app.js" id="ajax-comment-js"></script>
