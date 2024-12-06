@@ -2,11 +2,7 @@
 <link rel='stylesheet' id='ajax-comment-css' href='https://mango.huitheme.cn/wp-content/themes/mango/inc/comment/app.css' type='text/css' media='all' />
 <script type="text/javascript" src="https://mango.huitheme.cn/wp-content/themes/mango/inc/comment/app.js" id="ajax-comment-js"></script>
 
-<?php function threadedComments($comments, $options) { 
-  // 评论层数大于0为子级，否则是父级
-  $commentOlClass = $comments->levels > 0 ? 'children' : 'comment-list';
-?>
-<ol class="<?php echo $commentOlClass; ?>">
+<?php function threadedComments($comments, $options) { ?>
   <li id="<?php $comments->theId(); ?>" class="comment even thread-even depth-<?php echo ($comments->levels) + 1; ?>">
     <article id="div-<?php $comments->theId(); ?>" class="comment-body">
       <footer class="comment-meta">
@@ -28,10 +24,11 @@
     </article>
     <?php if ($comments->children) { 
       /* 子评论 */
-      $comments->threadedComments($options);
+      echo '<ol class="children">';
+        $comments->threadedComments($options);
+      echo '</ol>';
     }?>
   </li>
-</ol>
 <?php } ?>
 
 <div class="post_comment" id="post_comment_anchor">
@@ -44,7 +41,9 @@
   <?php if ($comments->have()) : ?>
         <!-- 评论的内容 -->
         <h3 class="comments-title"><i class="bi bi-filter me-2"></i>评论<small>(<?php $this->commentsNum(); ?>)</small></h3>
-        <?php $comments->listComments(array('before'=>'','after'=>'')); ?>
+        <ol class="comment-list">
+            <?php $comments->listComments(array('before'=>'','after'=>'')); ?>
+        </ol>
   <?php endif; ?>
 
 <!-- 评论表单 -->
