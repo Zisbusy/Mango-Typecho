@@ -22,12 +22,12 @@
         <a rel="nofollow" class="comment-reply-link" href="" onclick="return TypechoComment.reply('<?php $comments->theId(); ?>', <?php $comments->coid();?>);" data-commentid="9" data-postid="1082" data-belowelement="div-comment-9" data-respondelement="respond" data-replyto="回复给 王宜楷" aria-label="回复给 王宜楷">回复</a>
       </div>
     </article>
-    <?php if ($comments->children) { 
-      /* 子评论 */
-      echo '<ol class="children">';
-        $comments->threadedComments($options);
-      echo '</ol>';
-    }?>
+    <?php if ($comments->children) { ?>
+      <!-- 子评论 -->
+      <ol class="children">
+        <?php $comments->threadedComments($options); ?>
+      </ol>
+    <?php } ?>
   </li>
 <?php } ?>
 
