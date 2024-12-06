@@ -44,7 +44,7 @@
   <?php if ($comments->have()) : ?>
         <!-- 评论的内容 -->
         <h3 class="comments-title"><i class="bi bi-filter me-2"></i>评论<small>(<?php $this->commentsNum(); ?>)</small></h3>
-        <?php $comments->listComments(); ?>
+        <?php $comments->listComments(array('before'=>'','after'=>'')); ?>
   <?php endif; ?>
 
 <!-- 评论表单 -->
