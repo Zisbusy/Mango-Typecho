@@ -93,7 +93,6 @@
           <!-- 导航栏 -->
           <nav class="header-menu">
             <ul class="header-menu-ul">
-              <li><a href="/">首页</a></li>
               <?php $this->need('inc/nav.php'); ?>
             </ul>
           </nav>
