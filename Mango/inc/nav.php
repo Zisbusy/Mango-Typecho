@@ -1,4 +1,5 @@
 <!-- 输出文章分类 -->
+<li><a href="/" title="首页">首页</a></li>
 <?php $this->widget('Widget_Metas_Category_List')->to($categorys); ?>
 <?php while($categorys->next()): ?>
   <?php if ($categorys->levels === 0): ?>
