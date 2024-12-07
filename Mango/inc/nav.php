@@ -28,5 +28,5 @@
 <!-- 输出独立页面 -->
 <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
 <?php while($pages->next()): ?>
-  <li><a href="<?php $pages->permalink(); ?>"><?php $pages->title(); ?></a></li>
+  <li><a href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a></li>
 <?php endwhile; ?>
