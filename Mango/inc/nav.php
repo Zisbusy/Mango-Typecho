@@ -1,5 +1,6 @@
 <?php 
 // 获取后台配置项目，防止未开启伪静态状态下分类链接404
+// 兼容 typecho 1.3 
 $options = Typecho_Widget::widget('Widget_Options');
 // 读取是否开启伪静态
 $rewriteEnabled = $options->rewrite;
