@@ -1,29 +1,39 @@
+<?php 
+// 获取后台配置项目，防止未开启伪静态状态下分类链接404
+$options = Typecho_Widget::widget('Widget_Options');
+// 读取是否开启伪静态
+$rewriteEnabled = $options->rewrite;
+// 赋值
+if ($rewriteEnabled) {
+    $hasindex = $options->siteUrl;
+} else {
+    $hasindex = $options->siteUrl . "index.php/";
+}
+?>
+
 <!-- 输出文章分类 -->
 <li><a href="/" title="首页">首页</a></li>
-<?php $this->widget('Widget_Metas_Category_List')->to($categorys); ?>
-<?php while($categorys->next()): ?>
-  <?php if ($categorys->levels === 0): ?>
-    <?php $children = $categorys->getAllChildren($categorys->mid); ?>
-    <?php if (empty($children)) { ?>
-      <!-- 遍历一级标题 -->
+<?php $this->widget('Widget_Metas_Category_List')->to($category); ?>
+<?php while($category->next()): ?>
+  <?php if(count($category->children)):?>
+    <li class="menu-item-has-children">
+      <a href="<?php $category->permalink(); ?>" title="<?php echo $category->name; ?>"><?php echo $category->name; ?></a>
+      <!-- 子分类 -->
+      <ul class="sub-menu" style="display: none;">
+        <?php foreach($category->children as $childCategory):?>
+          <li><a href="<?php echo $hasindex . 'category/' . $childCategory['slug'] ?>" title="<?php echo $childCategory['name']; ?>"><?php echo $childCategory['name']; ?></a></li>
+        <?php endforeach; ?>
+      </ul>
+    </li>
+    <!-- 跳过循环 输出下一个分类-->
+    <?php continue; ?>
+  <?php else:?>
+    <?php if($category->levels == 0):?>
       <li>
-        <a href="<?php $categorys->permalink(); ?>" title="<?php $categorys->name(); ?>"><?php $categorys->name(); ?></a>
+        <a href="<?php $category->permalink(); ?>" title="<?php $category->name(); ?>"><?php $category->name(); ?></a>
       </li>
-    <?php } else { ?>
-      <li class="menu-item-has-children">
-        <a href="<?php $categorys->permalink(); ?>" title="<?php $categorys->name(); ?>"><?php $categorys->name(); ?></a>
-        <!-- 二级标题 -->
-        <ul class="sub-menu">
-          <?php foreach ($children as $mid) { ?>
-          <?php $child = $categorys->getCategory($mid); ?>
-            <li>
-              <a href="<?php echo $child['permalink'] ?>" title="<?php echo $child['name']; ?>"><?php echo $child['name']; ?></a>
-            </li>
-          <?php } ?>
-        </ul>
-      </li>
-    <?php } ?>
-  <?php endif; ?>
+    <?php endif;?>
+  <?php endif;?>
 <?php endwhile; ?>
 <!-- 输出独立页面 -->
 <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
