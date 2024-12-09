@@ -1,4 +1,18 @@
 <?php
+// 获取 mid 变了成了对象，这里判断一下
+// 兼容 typecho 1.3
+function getMid($pageRow) {
+  // 检查 pageRow 是否为数组或对象
+  if (is_array($pageRow)) {
+    return $pageRow['mid'];
+  } elseif (is_object($pageRow)) {
+    return $pageRow->mid;
+  }
+  // 如果既不是数组也不是对象，返回null或适当的默认值
+  return null;
+}
+
+// 根据分类 mid 获取对应 mid 的图片
 function findImageByMid($mid) {
   // 定义 category 文件夹的路径
   $categoryPath = '/usr/themes/Mango/assets/img/category/';
@@ -39,7 +53,7 @@ function findImageByMid($mid) {
 <div class="cat_head">
   <!-- 判断是否是分类 - 展示分类图片 -->
   <?php if($this->is('category')):?>
-    <img width="180" height="180" src="<?php echo findImageByMid($this->pageRow['mid']); ?>" class="attachment-180x180x1 size-180x180x1 " alt="" decoding="async">
+    <img width="180" height="180" src="<?php echo findImageByMid(getMid($this->pageRow)); ?>" class="attachment-180x180x1 size-180x180x1 " alt="" decoding="async">
   <?php endif; ?>
 
   <div class="cat_head_r">
