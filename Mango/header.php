@@ -66,7 +66,7 @@
       echo ' - '.$this->options->subTitle;
     }
 ?></title>
-<?php $this->header('generator=&template=&pingback=&xmlrpc=&wlw=&rss2=&rss1=&atom=&commentReply=&antiSpam='); ?>
+<?php $this->header('generator=&template=&pingback=&xmlrpc=&wlw=&rss2=&rss1=&atom=&antiSpam='); ?>
 <link rel="shortcut icon" href="/usr/themes/Mango/assets/img/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/css/bootstrap.min.css'); ?>" type="text/css" media="all">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/css/fancybox.css'); ?>" type="text/css" media="all">
