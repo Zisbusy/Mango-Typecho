@@ -9,14 +9,13 @@
         <div class="comment-author vcard">
           <img alt="<?php $comments->author(false); ?>" src="<?php echo getavatar($comments->mail); ?>" class="avatar avatar-40 photo" height="40" width="40" loading="lazy" decoding="async">
           <b class="fn"><a target="_blank" href="<?php $comments->url(); ?>" rel="external nofollow" class="url"><?php $comments->author(false); ?></a></b>
-          <span class="says">说道：</span>
         </div>
         <div class="comment-metadata">
           <a href="<?php $comments->permalink(); ?>"><time datetime="<?php $comments->date('Y-m-d\TH:iP'); ?>"><?php $comments->date("Y年m月d日 H:i"); ?></time></a>
         </div>
       </footer>
       <div class="comment-content">
-        <p><?php $comments->content(); ?></p>
+        <?php $comments->content(); ?>
       </div>
       <div class="reply">
         <a rel="nofollow" class="comment-reply-link" href="<?php echo substr($comments->permalink, 0, - strlen($comments->theId) - 1) . '?replyTo=' . $comments->coid .'#'. $comments->parameter->respondId; ?>" onclick="return TypechoComment.reply('<?php $comments->theId(); ?>', <?php $comments->coid();?>, this);"  aria-label="回复给 <?php $comments->author(false); ?>">回复</a>
