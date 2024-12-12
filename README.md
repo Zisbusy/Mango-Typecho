@@ -10,3 +10,8 @@ Mango For Typecho
 
 ## 使用说明
 1. 请在网站目录 /usr/ 下新建 thumb 文件，此文件夹用于储存图片缩略图。      
+
+
+## 环境
+PHP:7 8      
+Typecho 1.2、1.3      
