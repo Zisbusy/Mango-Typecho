@@ -56,13 +56,13 @@
 	</h3>
     <form action="<?php $this->commentUrl() ?>" method="post" id="commentform" class="comment-form">
         <p class="comment-form-comment">
-            <textarea id="comment" name="comment" aria-required="true"></textarea>
+            <textarea id="comment" name="text" aria-required="true"></textarea>
         </p>
         <p class="comment-form-author">
             <input id="author" class="blog-form-input" placeholder="昵称" name="author" type="text" value="" size="30">
         </p>
         <p class="comment-form-email">
-            <input id="email" class="blog-form-input" placeholder="Email " name="email" type="text" value="" size="30">
+            <input id="email" class="blog-form-input" placeholder="Email " name="mail" type="text" value="" size="30">
         </p>
         <p class="comment-form-url">
             <input id="url" class="blog-form-input" placeholder="网站地址" name="url" type="text" value="" size="30">
