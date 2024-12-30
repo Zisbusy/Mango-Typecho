@@ -13,6 +13,9 @@
         <div class="comment-metadata">
           <a href="<?php $comments->permalink(); ?>"><time datetime="<?php $comments->date('Y-m-d\TH:iP'); ?>"><?php $comments->date("Y年m月d日 H:i"); ?></time></a>
         </div>
+        <?php if ($comments->status == 'waiting') : ?>
+          <em class="comment-awaiting-moderation">您的评论正在审核！</em>
+        <?php endif; ?>
       </footer>
       <div class="comment-content">
         <?php $comments->content(); ?>
