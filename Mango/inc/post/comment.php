@@ -1,6 +1,6 @@
-<!-- 三方资源 -->
-<link rel='stylesheet' id='ajax-comment-css' href='https://mango.huitheme.cn/wp-content/themes/mango/inc/comment/app.css' type='text/css' media='all' />
-<script type="text/javascript" src="https://mango.huitheme.cn/wp-content/themes/mango/inc/comment/app.js" id="ajax-comment-js"></script>
+<!-- 评论资源 -->
+<link rel="stylesheet" href="<?php $this->options->themeUrl('assets/css/comment.css'); ?>" id="ajax-comment-css" type="text/css" media="all">
+<script type="text/javascript" src="<?php $this->options->themeUrl('assets/js/comment.js'); ?>" id="ajax-comment-js"></script>
 
 <?php function threadedComments($comments, $options) { ?>
   <li id="<?php $comments->theId(); ?>" class="comment even thread-even depth-<?php echo ($comments->levels) + 1; ?>">
