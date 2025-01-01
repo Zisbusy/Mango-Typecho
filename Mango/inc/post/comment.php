@@ -34,17 +34,18 @@
 
 <div class="post_comment" id="post_comment_anchor">
   <div id="comments" class="comments-area">
-    <!-- 评论列表 -->
-    <?php $this->comments()->to($comments); ?>
-    <?php if ($comments->have()) : ?>
-      <!-- 评论的内容 -->
-      <h3 class="comments-title"><i class="bi bi-filter me-2"></i>评论<small>(<?php $this->commentsNum(); ?>)</small></h3>
-      <ol class="comment-list">
-        <?php $comments->listComments(array('before'=>'','after'=>'')); ?>
-      </ol>
-      <?php 
-        $comments->pageNav('上页', '下页', 1, '...', 
-          array(
+    <div class="layoutSingleColumn">
+      <!-- 评论列表 -->
+      <?php $this->comments()->to($comments); ?>
+      <?php if ($comments->have()) : ?>
+        <!-- 评论的内容 -->
+        <h3 class="comments-title"><i class="bi bi-filter me-2"></i>评论<small>(<?php $this->commentsNum(); ?>)</small></h3>
+        <ol class="comment-list">
+          <?php $comments->listComments(array('before'=>'','after'=>'')); ?>
+        </ol>
+        <?php 
+          $comments->pageNav('上页', '下页', 1, '...', 
+            array(
             'wrapTag' => 'div', 
             'wrapClass' => 'comments-nav', 
             'itemTag' => '', 
@@ -52,8 +53,8 @@
             'currentClass' => 'page-numbers current', 
             'prevClass' => 'prev page-numbers', 
             'nextClass' => 'next page-numbers',
-        ));
-      ?>
+          ));
+        ?>
       <?php endif; ?>
 
 <!-- 评论表单 -->
