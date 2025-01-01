@@ -1,6 +1,5 @@
 <!-- 评论资源 -->
 <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/css/comment.css'); ?>" id="ajax-comment-css" type="text/css" media="all">
-<script type="text/javascript" src="<?php $this->options->themeUrl('assets/js/comment.js'); ?>" id="ajax-comment-js"></script>
 
 <?php function threadedComments($comments, $options) { ?>
   <li id="<?php $comments->theId(); ?>" class="comment even thread-even depth-<?php echo ($comments->levels) + 1; ?>">
@@ -35,18 +34,27 @@
 
 <div class="post_comment" id="post_comment_anchor">
   <div id="comments" class="comments-area">
-    <div class="layoutSingleColumn">
-
-
-  <!-- 评论列表 -->
-  <?php $this->comments()->to($comments); ?>
-  <?php if ($comments->have()) : ?>
-        <!-- 评论的内容 -->
-        <h3 class="comments-title"><i class="bi bi-filter me-2"></i>评论<small>(<?php $this->commentsNum(); ?>)</small></h3>
-        <ol class="comment-list">
-            <?php $comments->listComments(array('before'=>'','after'=>'')); ?>
-        </ol>
-  <?php endif; ?>
+    <!-- 评论列表 -->
+    <?php $this->comments()->to($comments); ?>
+    <?php if ($comments->have()) : ?>
+      <!-- 评论的内容 -->
+      <h3 class="comments-title"><i class="bi bi-filter me-2"></i>评论<small>(<?php $this->commentsNum(); ?>)</small></h3>
+      <ol class="comment-list">
+        <?php $comments->listComments(array('before'=>'','after'=>'')); ?>
+      </ol>
+      <?php 
+        $comments->pageNav('上页', '下页', 1, '...', 
+          array(
+            'wrapTag' => 'div', 
+            'wrapClass' => 'comments-nav', 
+            'itemTag' => '', 
+            'textTag' => 'span', 
+            'currentClass' => 'page-numbers current', 
+            'prevClass' => 'prev page-numbers', 
+            'nextClass' => 'next page-numbers',
+        ));
+      ?>
+      <?php endif; ?>
 
 <!-- 评论表单 -->
 <?php if ($this->allow('comment')) : ?>
@@ -89,3 +97,7 @@
     </div>
   </div>
 </div>
+
+
+<!-- 评论资源 -->
+<script type="text/javascript" src="<?php $this->options->themeUrl('assets/js/comment.js'); ?>" id="ajax-comment-js"></script>
