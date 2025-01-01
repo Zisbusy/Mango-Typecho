@@ -1,5 +1,5 @@
 // ajax 翻页执行函数
-ajaxNav()
+window.onload = ajaxNav;
 // ajax 翻页函数
 function ajaxNav() {
   $('div.comments-nav a').click( function() {
