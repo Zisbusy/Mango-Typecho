@@ -7,8 +7,6 @@ function ajaxNav() {
     // e.preventDefault();
     $this = $(this);
     var href = $this.attr("href");
-    // 修改地址栏链接
-    history.replaceState({}, document.title, href);
     if (href != undefined) {
       $.ajax( {
         url: href,
