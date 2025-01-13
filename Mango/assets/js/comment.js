@@ -1,6 +1,6 @@
 // ajax 翻页执行函数
 window.onload = function(){
-    ajaxNav();
+  ajaxNav();
 };
 function ajaxNav() {
   $('div.comments-nav a').click( function(e) {
@@ -14,7 +14,7 @@ function ajaxNav() {
         url: href,
         type: "get",
         error: function(request) {
-            createButterbar("未知错误");
+          createButterbar("未知错误");
         },
         success: function(data) {
           // 获取新评论与翻页按钮
@@ -39,6 +39,6 @@ function ajaxNav() {
 
 // 提示函数
 function createButterbar(message) {
-	jQuery("body").append('<div class="butterBar"><p class="butterBar-message">' + message + '</p></div>');
-	setTimeout("jQuery('.butterBar').remove()", 3000);
+  jQuery("body").append('<div class="butterBar"><p class="butterBar-message">' + message + '</p></div>');
+  setTimeout("jQuery('.butterBar').remove()", 3000);
 }
