@@ -71,3 +71,5 @@
     #comments form.comment-form .form-submit .submit{width:100%;}
     #comments .comment-list li .comment-body .reply{display:block;}
 }
+
+.dark #comments .comments-nav span,.dark #comments .comments-nav a{background: #2a2a2b;color: #fff;}
