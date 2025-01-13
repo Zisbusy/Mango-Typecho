@@ -1,5 +1,4 @@
 /*comments*/
-#comments input:-webkit-autofill {transition:background-color 5000s ease-in-out 0s;}
 #comments{background:#fff;padding:30px;margin-bottom:20px;}
 #comments .comments-title{border-bottom:2px solid #f7f7f7;padding-bottom:25px;margin-bottom: 30px;font-size:16px;}
 #comments .comments-title small{color:#6a6a6a;margin-left:8px;font-weight:300;font-size:12px;}
@@ -72,6 +71,7 @@
     #comments form.comment-form .form-submit .submit{width:100%;}
     #comments .comment-list li .comment-body .reply{display:block;}
 }
-
+#comments input:-webkit-autofill {transition:background-color 5000s ease-in-out 0s;-webkit-text-fill-color: #636363;}
+.dark #comments input:-webkit-autofill {transition:background-color 5000s ease-in-out 0s;-webkit-text-fill-color: #ccc;}
 .dark #comments .comments-nav span,.dark #comments .comments-nav a{background: #2a2a2b;color: #fff;}
 .dark #comments .comments-nav a:hover,.dark #comments .comments-nav span:hover {background: #4270f6;color: #fff;}
