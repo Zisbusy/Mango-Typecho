@@ -3,8 +3,7 @@ window.onload = function(){
   ajaxNav();
 };
 function ajaxNav() {
-  $('div.comments-nav a').click( function(e) {
-    // e.preventDefault();
+  $('.layoutSingleColumn').on('click', 'div.comments-nav a', function() {
     $this = $(this);
     var href = $this.attr("href");
     if (href != undefined) {
