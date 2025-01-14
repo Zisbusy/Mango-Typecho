@@ -1,5 +1,5 @@
 /*comments*/
-#comments{background:#fff;padding:30px;margin-bottom:20px;}
+#comments{background:#fff;padding:30px;margin-bottom:20px;border-radius:10px;}
 #comments .comments-title{border-bottom:2px solid #f7f7f7;padding-bottom:25px;margin-bottom: 30px;font-size:16px;}
 #comments .comments-title small{color:#6a6a6a;margin-left:8px;font-weight:300;font-size:12px;}
 #comments .comment-list{margin-bottom: 30px;}
