@@ -1,7 +1,10 @@
-// ajax 翻页执行函数
+// 初始化函数
 window.onload = function(){
   ajaxNav();
+  activeComment();
 };
+
+// 翻页
 function ajaxNav() {
   $('.layoutSingleColumn').on('click', 'div.comments-nav a', function() {
     $this = $(this);
@@ -22,12 +25,23 @@ function ajaxNav() {
           $('ol.comment-list').after($(data).find("div.comments-nav"));
           // 跳到锚点
           $("html,body").animate({scrollTop: $('#comments').offset().top - 120}, 0 );
-          // 再次执行 绑定一下事件
-          ajaxNav()
         }
       });
     }
     return false;
+  });
+}
+
+// 回复与取消按钮，用于判断位置与父子评论
+function activeComment() {
+  var replyTo = '';
+  // 监听回复按钮，获取父级的 ID
+  $('.layoutSingleColumn').on('click', '.comment-reply-link', function(){
+    replyTo = $(this).parent().parent().attr("id");
+  });
+  // 监听取消回复按钮，清空变量
+  $('.layoutSingleColumn').on('click', '#cancel-comment-reply-link', function(){ 
+    replyTo = ''; 
   });
 }
 
