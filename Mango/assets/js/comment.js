@@ -15,15 +15,12 @@ function ajaxNav() {
           createButterbar("未知错误");
         },
         success: function(data) {
-          // 获取新评论与翻页按钮
-          var comments = $(data).find("ol.comment-list");
-          var commentsNav = $(data).find("div.comments-nav");
           // 移除当前的评论与翻页按钮
           $('ol.comment-list').remove();
           $('div.comments-nav').remove();
           // 添加新的评论与翻页按钮
-          $('h3.comments-title').after(comments);
-          $('ol.comment-list').after(commentsNav);
+          $('h3.comments-title').after($(data).find("ol.comment-list"));
+          $('ol.comment-list').after($(data).find("div.comments-nav"));
           // 跳到锚点
           $("html,body").animate({scrollTop: $('#comments').offset().top - 120}, 0 );
           // 再次执行 绑定一下事件
