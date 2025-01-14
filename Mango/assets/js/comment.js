@@ -39,6 +39,8 @@ function ajaxComment() {
   // 监听回复按钮，获取父级的 ID
   $('.layoutSingleColumn').on('click', '.comment-reply-link', function(){
     replyTo = $(this).parent().parent().attr("id");
+    // 修正评论表单位置
+    $('.comment-respond').insertAfter('#' + replyTo);
   });
   // 监听取消回复按钮，清空变量
   $('.layoutSingleColumn').on('click', '#cancel-comment-reply-link', function(){ 
