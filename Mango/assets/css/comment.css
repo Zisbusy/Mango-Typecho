@@ -75,3 +75,7 @@
 .dark #comments input:-webkit-autofill {transition:background-color 5000s ease-in-out 0s;-webkit-text-fill-color: #ccc;}
 .dark #comments .comments-nav span,.dark #comments .comments-nav a{background: #2a2a2b;color: #fff;}
 .dark #comments .comments-nav a:hover,.dark #comments .comments-nav span:hover {background: #4270f6;color: #fff;}
+.commentsTip{margin: 30px 0;}
+.commentsTip svg{display: block;margin: 0 auto;max-height: 120px;}
+.commentsTip p{color: #dbdbdb;text-align: center;margin-bottom: 20px;}
+.dark .commentsTip{opacity: 0.3;}
