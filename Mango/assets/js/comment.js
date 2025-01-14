@@ -8,7 +8,7 @@ window.onload = function(){
 function ajaxNav() {
   $('.layoutSingleColumn').on('click', 'div.comments-nav a', function() {
     $this = $(this);
-    var href = $this.attr("href");
+    let href = $this.attr("href");
     if (href != undefined) {
       $.ajax( {
         url: href,
