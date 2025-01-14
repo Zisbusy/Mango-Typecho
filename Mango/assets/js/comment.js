@@ -1,7 +1,7 @@
 // 初始化函数
 window.onload = function(){
   ajaxNav();
-  activeComment();
+  ajaxComment();
 };
 
 // 翻页
@@ -32,9 +32,10 @@ function ajaxNav() {
   });
 }
 
-// 回复与取消按钮，用于判断位置与父子评论
-function activeComment() {
-  var replyTo = '';
+// 评论
+function ajaxComment() {
+  // 回复与取消按钮，用于判断位置与父子评论
+  let replyTo = '';
   // 监听回复按钮，获取父级的 ID
   $('.layoutSingleColumn').on('click', '.comment-reply-link', function(){
     replyTo = $(this).parent().parent().attr("id");
@@ -43,6 +44,37 @@ function activeComment() {
   $('.layoutSingleColumn').on('click', '#cancel-comment-reply-link', function(){ 
     replyTo = ''; 
   });
+
+  // 评论数加一
+  function commentCounts() {
+    var smallTag = $(".comments-title small")
+    var newNumber = parseInt(smallTag.text().match(/\d+/)[0]) + 1;
+    smallTag.text("(" + newNumber + ")");
+  }
+  
+  // 发送数据前淡化表单禁用提交按钮
+  function beforeSendComment() {
+    $('#submit').val("提交中...");
+    $(".comment-respond").css({ 'opacity': '0.5' });
+    $("#submit").attr("disabled", true).css('cursor', 'not-allowed');
+  }
+
+  // 发送数据后恢复表单、提交按钮，绑定点击事件
+  function afterSendComment(isSuccess) {
+    $('#submit').val("再次评论");
+    $(".comment-respond").css({ 'opacity': '1' });
+    $("#submit").attr("disabled", false).css('cursor', 'pointer');
+    if (isSuccess) {
+      // 评论加一
+      commentCounts()
+      // 清空回复位置变量
+      replyTo = '';
+      // 清空留言内容
+      document.querySelector("#comment").value = '';
+    }
+  }
+
+  
 }
 
 // 提示函数
