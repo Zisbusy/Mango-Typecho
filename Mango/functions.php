@@ -66,4 +66,6 @@ require_once('inc/core/fancyimg.php');
 require_once('inc/core/views.php');
 // 头像处理
 require_once('inc/core/avatar.php');
+// 评论过滤
+require_once('inc/core/filter.php');
 ?>
