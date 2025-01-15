@@ -9,7 +9,6 @@
 #comments .comment-list li .comment-body .comment-meta .comment-author{}
 #comments .comment-list li .comment-body .comment-meta .comment-author img{border-radius:50%;}
 #comments .comment-list li .comment-body .comment-meta .comment-author .fn{position:absolute;left:56px;top:3px;font-size:13px;color:#6a6a6a;font-weight:inherit;}
-#comments .comment-list li .comment-body .comment-meta .comment-author .says{display:none;}
 #comments .comment-list li .comment-body .comment-meta .comment-metadata{position:absolute;left:56px;top:25px;font-size:12px;color:#717171;}
 #comments .comment-list li .comment-body .comment-meta .comment-metadata a{color:#717171;font-weight:300;}
 #comments .comment-list li .comment-body .comment-meta .comment-awaiting-moderation{position:absolute;top:10px;right:30px;font-size:12px;color:#afafaf;font-weight:300;}
