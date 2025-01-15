@@ -17,7 +17,7 @@
         <?php endif; ?>
       </footer>
       <div class="comment-content">
-        <?php $comments->content(); ?>
+        <p><?php echo contentFilter($comments->content);?></p>
       </div>
       <div class="reply">
         <a rel="nofollow" class="comment-reply-link" href="<?php echo substr($comments->permalink, 0, - strlen($comments->theId) - 1) . '?replyTo=' . $comments->coid .'#'. $comments->parameter->respondId; ?>" onclick="return TypechoComment.reply('<?php $comments->theId(); ?>', <?php $comments->coid();?>, this);"  aria-label="回复给 <?php $comments->author(false); ?>">回复</a>
