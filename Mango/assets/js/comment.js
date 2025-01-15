@@ -76,6 +76,61 @@ function ajaxComment() {
     }
   }
 
+  // 添加父评论
+  function fatherComment(data) {
+    // 移除空评论容器
+    $('.commentsTip').remove();
+    // 移除当前的评论与翻页按钮
+    $('ol.comment-list').remove();
+    $('div.comments-nav').remove();
+    // 添加新的评论与翻页按钮
+    $('h3.comments-title').after($(data).find("ol.comment-list"));
+    $('ol.comment-list').after($(data).find("div.comments-nav"));
+    // 跳到锚点
+    $("html,body").animate({scrollTop: $('#comments').offset().top - 120}, 0 );
+  }
+  
+  // 添加子评论
+  function childrenComment(data) {
+    // 获取新评论 ID
+    newCommentId = $(".comment-list", data).html().match(/id=\"?comment-\d+/g).join().match(/\d+/g).sort(function (a, b) { return a - b }).pop();
+    // 新评论
+    newComment = $("#comment-" + newCommentId, data).parent();
+    // 插入数据
+    $('#' + replyTo).after(newComment);
+    // 取消评论
+    TypechoComment.cancelReply();
+  }
+  
+  // 监听发送按钮
+  $('.layoutSingleColumn').on('click', '#submit', function() {
+    // 发送数据前操作
+    beforeSendComment();
+    // 表单位置
+    let commentform = $("#commentform");
+        
+    $.ajax( {
+      url: commentform.attr('action'),
+      type: commentform.attr('method'),
+      data: commentform.serializeArray(),
+      error: function (date) {
+        afterSendComment(false);
+        createButterbar($(".container", date.responseText).prevObject[7].innerHTML.replace(/\s*/g,""));
+      },
+      success: function(data) {
+        if (replyTo == "") {
+          // 添加父评论
+          fatherComment(data);
+        } else {
+          // 添加子评论
+          childrenComment(data);
+        }
+        // 提交成功后操作
+        afterSendComment(true);
+      }
+    });
+    return false;
+  });
   
 }
 
