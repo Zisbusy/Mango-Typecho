@@ -37,7 +37,6 @@
 #comments form.comment-form .comment-form-email:before{content:"\F152";font-family:'bootstrap-icons';position:absolute;top:7px;left:8px;}
 #comments form.comment-form .comment-form-url{width:34%;float:left;position:relative;}
 #comments form.comment-form .comment-form-url:before{content:"\F470";font-family:'bootstrap-icons';position:absolute;top:7px;left:8px;}
-#comments form.comment-form .comment-form-cookies-consent{display:none}
 #comments form.comment-form .form-submit{width:100%;}
 #comments form.comment-form .form-submit .submit{width:130px;padding:8px;float:right;background:#4270f5;color:#fff;}
 #comments form.comment-form .form-submit .submit:hover{background-color:#4270f5;color:#fff;}
