@@ -112,6 +112,11 @@ function ajaxComment() {
       /javascript:/i,  // JavaScript URL scheme
       /\bbase64\b/i,  // Base64编码
     ];
+    // 评论不能小于两个字符
+    if (commentform[0].value.length < 2) {
+      createButterbar("评论不能小于2个字符");
+      return false;
+    }
     // 评论内容验证
     for (let pattern of xssPatterns) {
       if (pattern.test(commentform[0].value)) {
