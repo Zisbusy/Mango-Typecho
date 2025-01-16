@@ -101,18 +101,63 @@ function ajaxComment() {
     // 取消评论
     TypechoComment.cancelReply();
   }
+
+  // 前端过滤 xss 提交
+  function infoChack(commentform) {
+    // 定义 xss 关键词
+    const xssPatterns = [
+      /<!--.*?-->/,  // HTML注释
+      /<[^>]+>/,  // 匹配任何HTML标签
+      /&#?\w+;/,  // 匹配HTML实体编码
+      /javascript:/i,  // JavaScript URL scheme
+      /\bbase64\b/i,  // Base64编码
+    ];
+    // 评论内容验证
+    for (let pattern of xssPatterns) {
+      if (pattern.test(commentform[0].value)) {
+        createButterbar("评论格式错误");
+        return false;
+      }
+    }
+    // 链接内容验证
+    for (let pattern of xssPatterns) {
+      if (pattern.test(commentform[3].value)) {
+        createButterbar("链接格式错误");
+        return false;
+      }
+    }
+    // 邮箱验证
+    if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(commentform[2].value)) {
+      createButterbar("邮箱格式错误");
+      return false;
+    }
+    // 昵称验证
+    let nameLenght = commentform[1].value.length;
+    console.log(nameLenght);
+    if (nameLenght <= 0 || nameLenght > 10) {
+      createButterbar("昵称不能为空或不能大于10个字符");
+      return false;
+    }
+    return true;
+  }
   
   // 监听发送按钮
   $('.layoutSingleColumn').on('click', '#submit', function() {
     // 发送数据前操作
     beforeSendComment();
-    // 表单位置
+    // 表单位置、数据
     let commentform = $("#commentform");
-        
+    let commentData = $("#commentform").serializeArray();
+    // 提交前数据校验
+    if (!infoChack(commentData)){
+      afterSendComment(false);
+      return false;
+    }
+    // 请求
     $.ajax( {
       url: commentform.attr('action'),
       type: commentform.attr('method'),
-      data: commentform.serializeArray(),
+      data: commentData,
       error: function (date) {
         afterSendComment(false);
         createButterbar($(".container", date.responseText).prevObject[7].innerHTML.replace(/\s*/g,""));
