@@ -83,10 +83,6 @@
         <p class="comment-form-url">
             <input id="url" class="blog-form-input" placeholder="网站地址" name="url" type="text" value="<?php $this->remember('url'); ?>" size="30">
         </p>
-        <p class="comment-form-cookies-consent">
-            <input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes">
-            <label for="wp-comment-cookies-consent">在此浏览器中保存我的显示名称、邮箱地址和网站地址，以便下次评论时使用。</label>
-        </p>
         <p class="form-submit">
             <input name="submit" type="submit" id="submit" class="submit" value="发布评论">
             <input type="hidden" name="comment_post_ID" value="1082" id="comment_post_ID">
