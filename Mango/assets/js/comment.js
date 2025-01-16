@@ -133,7 +133,6 @@ function ajaxComment() {
     }
     // 昵称验证
     let nameLenght = commentform[1].value.length;
-    console.log(nameLenght);
     if (nameLenght <= 0 || nameLenght > 10) {
       createButterbar("昵称不能为空或不能大于10个字符");
       return false;
