@@ -85,8 +85,6 @@
         </p>
         <p class="form-submit">
             <input name="submit" type="submit" id="submit" class="submit" value="发布评论">
-            <input type="hidden" name="comment_post_ID" value="1082" id="comment_post_ID">
-            <input type="hidden" name="comment_parent" id="comment_parent" value="0">
         </p>
     </form>
   </div>
