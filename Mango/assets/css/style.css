@@ -464,7 +464,7 @@ html.dark::-webkit-scrollbar-thumb{background:#333;}
 .wznrys .wp-block-image figure img{}
 .wznrys .wp-block-image figure.aligncenter{}
 .wznrys .wp-block-image figure.aligncenter img{display:block;margin:auto;}
-.wznrys figure{border:none!important;}
+.wznrys figure{border:none!important;margin:0;}
 .wznrys figcaption{font-size:12px;font-weight:300;margin:15px 0px!important;text-align:center;}
 .wznrys figure.wp-block-video video{width:100%;}
 .wznrys .wp-block-gallery figcaption{margin:0!important;}
