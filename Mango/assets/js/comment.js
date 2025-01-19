@@ -124,23 +124,26 @@ function ajaxComment() {
         return false;
       }
     }
-    // 链接内容验证
-    for (let pattern of xssPatterns) {
-      if (pattern.test(commentform[3].value)) {
-        createButterbar("链接格式错误");
+    // 判断是否是已经登陆状态，已经登陆不做身份信息验证
+    if($('.hasLogin').length == 0){
+      // 链接内容验证
+      for (let pattern of xssPatterns) {
+        if (pattern.test(commentform[3].value)) {
+          createButterbar("链接格式错误");
+          return false;
+        }
+      }
+      // 邮箱验证
+      if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(commentform[2].value)) {
+        createButterbar("邮箱格式错误");
         return false;
       }
-    }
-    // 邮箱验证
-    if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(commentform[2].value)) {
-      createButterbar("邮箱格式错误");
-      return false;
-    }
-    // 昵称验证
-    let nameLenght = commentform[1].value.length;
-    if (nameLenght <= 0 || nameLenght > 10) {
-      createButterbar("昵称不能为空或不能大于10个字符");
-      return false;
+      // 昵称验证
+      let nameLenght = commentform[1].value.length;
+      if (nameLenght <= 0 || nameLenght > 10) {
+        createButterbar("昵称不能为空或不能大于10个字符");
+        return false;
+      }
     }
     return true;
   }
