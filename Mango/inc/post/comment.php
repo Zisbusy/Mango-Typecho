@@ -60,43 +60,46 @@
           <p>暂无</p>
         </div>
       <?php endif; ?>
-
-<!-- 评论表单 -->
-<?php if ($this->allow('comment')) : ?>
-<div id="<?php $this->respondId(); ?>" class="comment-respond">
-    <h3 id="reply-title" class="comment-reply-title">
-        <i class="bi bi-keyboard me-1"></i>发布评论 
-        <small>
+      <!-- 评论表单 -->
+      <?php if ($this->allow('comment')) : ?>
+      <div id="<?php $this->respondId(); ?>" class="comment-respond">
+        <h3 id="reply-title" class="comment-reply-title">
+          <i class="bi bi-keyboard me-1"></i>发布评论 
+          <small>
             <?php $comments->cancelReply(); ?>
-        </small>
-	</h3>
-    <form action="<?php $this->commentUrl() ?>" method="post" id="commentform" class="comment-form">
-        <p class="comment-form-comment">
+          </small>
+        </h3>
+        <form action="<?php $this->commentUrl() ?>" method="post" id="commentform" class="comment-form">
+          <p class="comment-form-comment">
             <textarea id="comment" name="text" aria-required="true"></textarea>
-        </p>
-        <p class="comment-form-author">
-            <input id="author" class="blog-form-input" placeholder="昵称" name="author" type="text" value="<?php $this->remember('author'); ?>" size="30">
-        </p>
-        <p class="comment-form-email">
-            <input id="email" class="blog-form-input" placeholder="Email " name="mail" type="text" value="<?php $this->remember('mail'); ?>" size="30">
-        </p>
-        <p class="comment-form-url">
-            <input id="url" class="blog-form-input" placeholder="网站地址" name="url" type="text" value="<?php $this->remember('url'); ?>" size="30">
-        </p>
-        <p class="form-submit">
-            <input name="submit" type="submit" id="submit" class="submit" value="发布评论">
-        </p>
-    </form>
-  </div>
-<?php endif; ?>
-	    
-
-	    
-
+          </p>
+          <?php if($this->user->hasLogin()): ?>
+            <div class="hasLogin">
+              <span><?php $this->author->screenName(); ?> - 已登陆</span>
+              <a href="<?php $this->options->logoutUrl(); ?>">
+                <svg t="1737103824833" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5927" width="100" height="100"><path d="M0 192v640c0 70.7 57.3 128 128 128h352c17.7 0 32-14.3 32-32s-14.3-32-32-32H128c-35.3 0-64-28.7-64-64V192c0-35.3 28.7-64 64-64h352c17.7 0 32-14.3 32-32s-14.3-32-32-32H128C57.3 64 0 121.3 0 192z" p-id="5928"></path><path d="M1013.3 488.3L650.9 160.7c-41.2-37.2-106.9-8-106.9 47.5V339c0 4.4-3.6 8-8 8H224c-17.7 0-32 14.3-32 32v266c0 17.7 14.3 32 32 32h312c4.4 0 8 3.6 8 8v130.9c0 55.5 65.8 84.7 106.9 47.5l362.4-327.6c14.1-12.8 14.1-34.8 0-47.5zM256 597V427c0-8.8 7.2-16 16-16h304c17.7 0 32-14.3 32-32V244.9c0-13.9 16.4-21.2 26.7-11.9L938 506.1c3.5 3.2 3.5 8.7 0 11.9L634.7 791c-10.3 9.3-26.7 2-26.7-11.9V645c0-17.7-14.3-32-32-32H272c-8.8 0-16-7.2-16-16z" p-id="5929"></path></svg>
+              </a>
+            </div>
+          <?php else: ?>
+            <p class="comment-form-author">
+              <input id="author" class="blog-form-input" placeholder="昵称" name="author" type="text" value="<?php $this->remember('author'); ?>" size="30">
+            </p>
+            <p class="comment-form-email">
+              <input id="email" class="blog-form-input" placeholder="Email " name="mail" type="text" value="<?php $this->remember('mail'); ?>" size="30">
+            </p>
+            <p class="comment-form-url">
+              <input id="url" class="blog-form-input" placeholder="网站地址" name="url" type="text" value="<?php $this->remember('url'); ?>" size="30">
+            </p>
+          <?php endif; ?>
+            <p class="form-submit">
+              <input name="submit" type="submit" id="submit" class="submit" value="发布评论">
+            </p>
+        </form>
+      </div>
+      <?php endif; ?>
     </div>
   </div>
 </div>
-
 
 <!-- 评论资源 -->
 <script type="text/javascript" src="<?php $this->options->themeUrl('assets/js/comment.js'); ?>" id="ajax-comment-js"></script>
