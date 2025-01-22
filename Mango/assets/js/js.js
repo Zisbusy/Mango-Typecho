@@ -25,6 +25,10 @@ function switchDarkMode() {
     setDark();
   }
 }
+// fancybox 图片灯箱
+Fancybox.bind('[data-fancybox]', {
+// Your custom options
+});
 
 
 jQuery(document).ready(function($){
