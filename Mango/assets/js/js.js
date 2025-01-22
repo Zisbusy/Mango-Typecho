@@ -27,27 +27,22 @@ function switchDarkMode() {
 }
 // fancybox 图片灯箱
 Fancybox.bind('[data-fancybox]', {
-// Your custom options
+  // Your custom options
 });
-
 
 jQuery(document).ready(function($){
-
-//table预设calss
-$('.wznrys table').addClass("table");
-
+  //table预设calss
+  $('.wznrys table').addClass("table");
 });
-
 
 $(document).ready(function(){
-    //子菜单点击展开
-    $('.menu-zk .menu-item-has-children').prepend('<span class="czxjcdbs"></span>');
-    $('.menu-zk li.menu-item-has-children .czxjcdbs').click(function(){
-    $(this).toggleClass("kai");
-    $(this).nextAll('.sub-menu').slideToggle("slow");
-    });
+  //子菜单点击展开
+  $('.menu-zk .menu-item-has-children').prepend('<span class="czxjcdbs"></span>');
+  $('.menu-zk li.menu-item-has-children .czxjcdbs').click(function(){
+  $(this).toggleClass("kai");
+  $(this).nextAll('.sub-menu').slideToggle("slow");
+  });
 });
-
 
 //列表ajax加载
 jQuery(document).ready(function($) {
