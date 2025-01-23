@@ -7,7 +7,12 @@
       <footer class="comment-meta">
         <div class="comment-author vcard">
           <img alt="<?php $comments->author(false); ?>" src="<?php echo getavatar($comments->mail); ?>" class="avatar avatar-40 photo" height="40" width="40" loading="lazy" decoding="async">
-          <b class="fn"><a target="_blank" href="<?php $comments->url(); ?>" rel="external nofollow" class="url"><?php $comments->author(false); ?></a></b>
+          <b class="fn">
+            <a target="_blank" href="<?php $comments->url(); ?>" rel="external nofollow" class="url"><?php $comments->author(false); ?></a>
+            <?php if ($comments->authorId) {if ($comments->authorId == $comments->ownerId) { ?>
+              <i class="bi bi-patch-check me-1 ownerId"></i>
+            <?php }} ?>
+          </b>
         </div>
         <div class="comment-metadata">
           <a href="<?php $comments->permalink(); ?>"><time datetime="<?php $comments->date('Y-m-d\TH:iP'); ?>"><?php $comments->date("Y年m月d日 H:i"); ?></time></a>
