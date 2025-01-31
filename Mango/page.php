@@ -7,7 +7,7 @@
     </div>
     <div class="post_container mb-4">
       <article class="wznrys">
-        <?php echo wrapImagesInLinks($this->content,$this->title); ?>
+        <?php echo wrapImagesInLinks(setLinks($this->content),$this->title); ?>
       </article>
     </div>
   </div>
