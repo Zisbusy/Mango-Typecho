@@ -51,13 +51,8 @@
       $thumbImagePath = '/usr/thumb/other' . $temPath;
     }
 
-    // 获取后台博客域名
-    if (substr($options->siteUrl, -1) == '/') {
-      // 移除最后一个字符（斜杠）
-      $siteUrl = substr($options->siteUrl, 0, -1);
-    }
-    
-    $thumbImageURL = $siteUrl . $thumbImagePath;
+    // 设置路径
+    $thumbImageURL = $options->rootUrl . $thumbImagePath;
     $localThumbImagePath = __TYPECHO_ROOT_DIR__ . $thumbImagePath;
 
     // 判断缓存有没有生成，有缓存直接返回。
