@@ -62,6 +62,8 @@ function themeInit($archive){
 require_once('inc/core/thumb.php');
 // img 标签处理
 require_once('inc/core/fancyimg.php');
+// a 标签处理
+require_once('inc/core/setLinks.php');
 // 阅读次数统计
 require_once('inc/core/views.php');
 // 头像处理
