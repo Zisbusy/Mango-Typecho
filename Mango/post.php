@@ -17,7 +17,7 @@
         <!-- 文章详情 -->
         <div class="post_container">
           <article class="wznrys">
-            <?php echo wrapImagesInLinks($this->content,$this->title); ?>
+            <?php echo wrapImagesInLinks(setLinks($this->content),$this->title); ?>
           </article>
           <!-- 标签 -->
           <?php $this->need('inc/tag.php'); ?>
