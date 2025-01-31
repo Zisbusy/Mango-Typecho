@@ -13,7 +13,6 @@ function getMid($pageRow) {
 }
 
 // 根据分类 mid 获取对应 mid 的图片
-// 根据分类 mid 获取对应 mid 的图片
 function findImageByMid($mid) {
   // 定义 category 文件夹的路径
   $categoryPath = '/usr/themes/Mango/assets/img/category/';
