@@ -1,0 +1,70 @@
+<?php
+// 获取 mid 变了成了对象，这里判断一下
+// 兼容 typecho 1.3
+function getMid($pageRow) {
+  // 检查 pageRow 是否为数组或对象
+  if (is_array($pageRow)) {
+    return $pageRow['mid'];
+  } elseif (is_object($pageRow)) {
+    return $pageRow->mid;
+  }
+  // 如果既不是数组也不是对象，返回null或适当的默认值
+  return null;
+}
+
+// 根据分类 mid 获取对应 mid 的图片
+function findImageByMid($mid) {
+  // 定义 category 文件夹的路径
+  $categoryPath = '/usr/themes/Mango/assets/img/category/';
+  $localcategoryPath = __TYPECHO_ROOT_DIR__ . $categoryPath;
+  
+  // 获取 Typecho 域名
+  $siteUrl = Typecho_Widget::widget('Widget_Options')->rootUrl;
+  
+  // 如果传入不为空，返回设置图片
+  if (!empty($mid)) {
+    // 获取 category 文件夹中的所有文件
+    $files = scandir($localcategoryPath);
+    // 遍历文件列表，寻找与 mid 匹配的图片文件
+    foreach ($files as $file) {
+      // 去掉文件扩展名
+      $baseName = pathinfo($file, PATHINFO_FILENAME);
+      // 检查文件名是否匹配 mid
+      if ($baseName == $mid) {
+        // 如果找到了匹配的文件，返回文件的完整路径
+        return $siteUrl . $categoryPath . $file;
+      }
+    }
+  }
+  
+  // 如果没有找到匹配的文件，返回默认图片
+  return $siteUrl . '/usr/themes/Mango/assets/img/category/default.webp';
+}
+?>
+
+<div class="cat_head">
+  <!-- 判断是否是分类 - 展示分类图片 -->
+  <?php if($this->is('category')):?>
+    <img width="180" height="180" src="<?php echo findImageByMid(getMid($this->pageRow)); ?>" class="attachment-180x180x1 size-180x180x1 " alt="" decoding="async">
+  <?php endif; ?>
+
+  <div class="cat_head_r">
+    <!-- 判断是否是分类 - 展示特别样式 -->
+    <?php if($this->is('search')):?>
+      <h2 class="mb-0"><?php $this->archiveTitle(array('search'=>_t('搜索 "%s" 的结果')), '', ''); ?></h2>
+    <?php else: ?>
+      <h2>
+        <i class="bi bi-hash me-1"></i>
+        <?php $this->archiveTitle(array(
+          'category'  =>  _t('%s'),
+          'tag'       =>  _t('%s'),
+          'author'    =>  _t('%s 发布的文章')
+        ), '', ''); ?>
+      </h2>
+    <?php endif; ?>
+    <!-- 判断是否是分类 - 展示分类介绍 -->
+    <?php if($this->is('category') && $this->getDescription()): ?>
+      <p><?php echo $this->getDescription(); ?></p>
+    <?php endif; ?>
+  </div>
+</div>
