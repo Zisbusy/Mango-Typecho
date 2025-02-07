@@ -56,6 +56,19 @@ function themeInit($archive){
   Helper::options()->commentsPageBreak = true;
   // 评论第一页作为默认显示
   Helper::options()->commentsPageDisplay = 'first';
+  // 点赞接口 创建一个路由
+  if ($archive->request->getPathInfo() == "/likes") {
+    // 执行函数
+    $reValues = likeup($archive->request->cid,$archive->request->action);
+    Typecho_Response::getInstance()->setStatus(200)->respond(
+      //返回数据
+      $archive->response->throwJson(array(
+        "status" => $reValues["status"],
+        "message" => $reValues["message"]
+      ))
+    );
+    exit;
+  }
 }
 
 // 图片压缩
@@ -66,6 +79,8 @@ require_once('inc/core/fancyimg.php');
 require_once('inc/core/setLinks.php');
 // 阅读次数统计
 require_once('inc/core/views.php');
+// 文章点赞
+require_once('inc/core/like.php');
 // 头像处理
 require_once('inc/core/avatar.php');
 // 评论过滤
