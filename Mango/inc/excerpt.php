@@ -63,9 +63,9 @@
             </span>
             <span class=""><i class="bi bi-eye-fill"></i><?php echo Postviews($this);?>浏览</span>
             <span>
-              <a href="javascript:;" data-action="ding" data-id="1437" class="specsZan ">
+              <a href="javascript:;" data-action="ding" data-id="1437" class="specsZan <?php echo likeDone($this->cid); ?>">
                   <i class="bi bi-heart-fill"></i>
-                  <em class="count">1387</em>
+                  <em class="count"><?php echo likeup($this->cid,'show'); ?></em>
               </a>
             </span>
         </div>
