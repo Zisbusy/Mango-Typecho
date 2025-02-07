@@ -31,7 +31,7 @@
           <div class="post_author_r">
             <div class="post_author_icon">
               <a href="#post_comment_anchor"><i class="bi bi-chat-square-dots-fill"></i><?php $this->commentsNum(); ?></a>
-              <a href="javascript:;" data-action="ding" data-id="1300" class="specsZan "><i class="bi bi-hand-thumbs-up-fill"></i><small class="count">104</small></a>
+              <a href="javascript:;" data-action="ding" data-id="<?php $this->cid(); ?>" class="specsZan <?php echo likeDone($this->cid); ?>"><i class="bi bi-hand-thumbs-up-fill"></i><small class="count"><?php echo likeup($this->cid,'show'); ?></small></a>
             </div>
           </div>
         </div>
