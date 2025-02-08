@@ -11,8 +11,8 @@ Mango For Typecho
 
 
 ## Cookie
-likes 记录点赞情况
-Views 记录浏览次数
+likes 记录点赞情况      
+Views 记录浏览次数      
 
 ## 环境
 PHP:7 8      
