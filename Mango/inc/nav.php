@@ -37,7 +37,12 @@ if ($rewriteEnabled) {
   <?php endif;?>
 <?php endwhile; ?>
 <!-- 输出独立页面 -->
-<?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
-<?php while($pages->next()): ?>
-  <li><a href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a></li>
-<?php endwhile; ?>
+<li class="menu-item-has-children">
+  <a href="" title="更多"><i class="bi bi-terminal me-1"></i>更多</a>
+  <ul class="sub-menu" style="display: none;">
+  <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
+  <?php while($pages->next()): ?>
+    <li><a href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a></li>
+  <?php endwhile; ?>
+  </ul>
+</li>
