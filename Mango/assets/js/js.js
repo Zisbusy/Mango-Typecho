@@ -86,32 +86,19 @@ function ds_mainmenu(ulclass){
 }
 ds_mainmenu('.header-menu-ul');
 
-
-
-//赞
+// 点赞
 $.fn.postLike = function() {
-    if ($(this).hasClass('done')) {
-        alert('勿重复操作');
-        return false;
-    } else {
-        $(this).addClass('done');
-        var id = $(this).data("id"),
-        action = $(this).data('action'),
-        rateHolder = $(this).children('.count');
-        var ajax_data = {
-            action: "specs_zan",
-            um_id: id,
-            um_action: action
-        };
-        $.post("/wp-admin/admin-ajax.php", ajax_data,
-        function(data) {
-            $(rateHolder).html(data);
-        });
-        return false;
-    }
+  let postLikeNum = $(this).find(".count").text();
+  let action = $(this).toggleClass('done').hasClass('done') ? 'do' : 'undo';
+  postLikeNum = parseInt(postLikeNum, 10) + (action === 'do' ? 1 : -1);
+  $(this).find(".count").text(postLikeNum);
+  // 请求
+  $.post('/likes', {
+    cid: $(this).data("id"),
+    action: action
+  });
 };
 $(document).on("click", ".specsZan", function() {$(this).postLike();});
-
 
 //返回顶部
 const scrollToTopBtn = document.querySelector(".scrollToTopBtn")
