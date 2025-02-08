@@ -7,7 +7,8 @@ Mango For Typecho
 2.文章内图片添加loading="lazy"        
 
 ## 使用说明
-1. 请在网站目录 /usr/ 下新建 thumb 文件，此文件夹用于储存图片缩略图。      
+1. 请在网站目录 /usr/ 下新建 thumb 文件，此文件夹用于储存图片缩略图。
+2. 设置伪静态      
 
 
 ## Cookie
