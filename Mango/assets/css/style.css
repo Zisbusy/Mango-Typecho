@@ -251,6 +251,7 @@ html.dark::-webkit-scrollbar-thumb{background:#333;}
 .copyright{color:#999;text-align:center;}
 .copyright p{color:#999;margin:0px;font-weight:300;}
 .copyright p a{color:#999;}
+.copyright i {margin: 0 0 0 3px !important;}
 @media (max-width:768px){
     .copyright p a.beian{display:block;margin-top:5px;}
 }
