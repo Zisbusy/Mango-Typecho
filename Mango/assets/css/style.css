@@ -497,9 +497,9 @@ html.dark::-webkit-scrollbar-thumb{background:#333;}
 .nopic_des a{background:#3556f3;margin-top:20px;padding:8px 45px;font-size:16px;color:#fff;}
 .fancybox__backdrop {background: rgb(180 180 180 / 50%) !important;backdrop-filter: blur(2rem);}
 .dark .fancybox__backdrop {background: rgba(24, 24, 27, 0.4) !important;backdrop-filter: blur(2rem);}
-.fancybox__toolbar {color: rgb(70 70 70);text-shadow:none;}
+.fancybox__toolbar {color: #6a6a6a;text-shadow:none;}
 .dark .fancybox__toolbar {color: var(--fancybox-color, currentColor);}
-.f-button svg {stroke: rgb(70 70 70);}
+.f-button svg {stroke: #6a6a6a;}
 .dark .f-button svg  {stroke: currentColor;}
 .is-modern .f-thumbs__slide__button {
     --clip-path: inset(0 calc(((var(--f-thumb-width, 0) - var(--f-thumb-clip-width, 0)))*(1 - var(--progress, 0))* 0.2) round var(--f-thumb-border-radius, 0));
