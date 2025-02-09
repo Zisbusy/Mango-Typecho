@@ -26,6 +26,10 @@ function themeConfig($form) {
   $ICP = new Typecho_Widget_Helper_Form_Element_Text('ICP', NULL,NULL, _t('ICP备案号'), _t('备案号（不填写时隐藏）'));
   $form->addInput($ICP);
 
+  // 公安备案号
+  $WangAn = new Typecho_Widget_Helper_Form_Element_Text('WangAn', NULL,NULL, _t('公安备案号'), _t('备案号（不填写时隐藏）'));
+  $form->addInput($WangAn);
+
   /* 缩略图配置选项 */
   if(function_exists('gd_info')){
     $thumbOption = new Typecho_Widget_Helper_Form_Element_Radio('thumbOption',
