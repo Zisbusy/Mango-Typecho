@@ -13,7 +13,7 @@ if ($rewriteEnabled) {
 ?>
 
 <!-- 输出文章分类 -->
-<li><a href="/" title="首页">首页</a></li>
+<li><a href="/" title="首页"><i class="bi bi-house me-1"></i>首页</a></li>
 <?php $this->widget('Widget_Metas_Category_List')->to($category); ?>
 <?php while($category->next()): ?>
   <?php if(count($category->children)):?>
