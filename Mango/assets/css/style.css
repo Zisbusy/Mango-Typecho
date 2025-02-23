@@ -508,3 +508,4 @@ html.dark::-webkit-scrollbar-thumb{background:#333;}
 @media (min-width: 1024px) {.fancybox__slide {padding: 64px 100px;}}
 .f-button {background: unset !important;}
 .post_author_icon .done i{color: #f8cf7a;}
+.is-compact .fancybox__footer {background: unset !important;}
