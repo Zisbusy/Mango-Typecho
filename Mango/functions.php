@@ -9,7 +9,7 @@ function themeConfig($form) {
   $form->addInput($avatar);
 
   // 个人介绍
-  $introduce = new Typecho_Widget_Helper_Form_Element_Text('introduce', NULL,'站在巨人的肩膀上而已', _t('个人介绍'), _t('首页公告内容'));
+  $introduce = new Typecho_Widget_Helper_Form_Element_Text('introduce', NULL,'站在巨人的肩膀上而已', _t('个人介绍'), _t('文章页面头像下个人介绍'));
   $form->addInput($introduce);
 
   // Banner 设置
@@ -34,7 +34,7 @@ function themeConfig($form) {
   if(function_exists('gd_info')){
     $thumbOption = new Typecho_Widget_Helper_Form_Element_Radio('thumbOption',
     array(true => '开启',false => '关闭',),
-    false, _t('生成缩略图'), _t('为文章列表与文章里图片生成小尺寸的缩略图，可显著提高加载速度，节省服务器带宽。目录: usr/thumb ，其余路径、文件名与 uploads 保持一致。<br />请提前在网站目录 usr 中创建 thumb 文件夹 。<br />注意：首次访问时需要生成缩略图，加载时间会比较长。'));
+    false, _t('生成缩略图'), _t('为文章列表与文章里图片生成小尺寸的缩略图，可显著提高加载速度，节省服务器带宽。<br /><b>注意： 首次访问时会生成缩略图，加载时间可能较长。请提前创建 usr/thumb 文件夹。</b>'));
     $form->addInput($thumbOption);
   }else {
     $thumbOption = new Typecho_Widget_Helper_Form_Element_Radio('thumbOption',
