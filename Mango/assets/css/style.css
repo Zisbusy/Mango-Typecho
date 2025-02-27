@@ -156,7 +156,7 @@ html.dark::-webkit-scrollbar-thumb{background:#333;}
 
 /*index banner left*/
 .index_banner{margin-bottom:25px;}
-#banner{border-radius:4px;overflow:hidden;}
+#banner{border-radius:var(--main-radius);overflow:hidden;}
 #banner .carousel-indicators{right:20px;left:inherit;bottom:14px;margin-right:inherit;margin-bottom:inherit;margin-left:inherit;display:flex;justify-content:flex-end;}
 #banner .carousel-indicators button{width:10px;height:10px;border-radius:50%;}
 #banner .carousel-control-prev,
@@ -179,7 +179,7 @@ html.dark::-webkit-scrollbar-thumb{background:#333;}
 }
 
 /*post_loop*/
-.post_loop{background:#fff;padding:30px;margin-bottom:20px;border-radius:10px;}
+.post_loop{background:#fff;padding:30px;margin-bottom:20px;border-radius:var(--main-radius);}
 .post_loop .post_loop_head{display:flex;justify-content:space-between;margin-bottom:20px;align-items:center;}
 .post_loop .post_loop_head .post_loop_head_author{display:flex;justify-content:flex-start;align-items:center;}
 .post_loop .post_loop_head .post_loop_head_author .images_author{display:block;}
@@ -236,7 +236,7 @@ html.dark::-webkit-scrollbar-thumb{background:#333;}
 
 /*catbox*/
 .catbox{}
-.cat_head{background:#fff;border-radius:10px;padding:20px;margin-bottom:20px;display:flex;flex-direction:row;align-items:center;}
+.cat_head{background:#fff;border-radius:var(--main-radius);padding:20px;margin-bottom:20px;display:flex;flex-direction:row;align-items:center;}
 .cat_head img{border-radius:6px;margin-right:20px;height:70px;width:70px;}
 .cat_head_r{}
 .cat_head_r h2{font-size:18px;margin-bottom: 0;}
@@ -264,7 +264,7 @@ html.dark::-webkit-scrollbar-thumb{background:#333;}
 
 /*widget*/
 .sidebar_sticky{position:sticky;top:95px;margin-bottom:20px;}
-.widget{margin-bottom:20px;position:relative;overflow:hidden;background:#FFF;padding:20px 22px 20px 22px;border-radius:10px;}
+.widget{margin-bottom:20px;position:relative;overflow:hidden;background:#FFF;padding:20px 22px 20px 22px;border-radius:var(--main-radius);}
 .widget-title{font-size:16px;text-transform:uppercase;margin-bottom:35px;position:relative;padding-left:1.25rem;}
 .widget-title:before{content:'';position:absolute;left:2px;top:6px;width:8px;height:8px;border-radius:5px;background:#0a59f8;background:linear-gradient(to top,#6598ff,#0a59f8);}
 .widget-title:after{content:'';position:absolute;height:1px;background:#f7f7f7;left:-22px;bottom:-15px;right:-22px;width:calc(100% + 44px);}
