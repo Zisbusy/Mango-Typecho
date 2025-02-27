@@ -497,8 +497,8 @@ html.dark::-webkit-scrollbar-thumb{background:#333;}
 }
 .nopic_des{position:fixed;width:100%;height:100%;background:#ffffff;top:0px;z-index:9999;display:flex;align-items:center;justify-content:center;flex-direction:column;font-size:20px;text-align:center;line-height:2;}
 .nopic_des a{background:#3556f3;margin-top:20px;padding:8px 45px;font-size:16px;color:#fff;}
-.fancybox__backdrop {background: rgb(180 180 180 / 50%) !important;backdrop-filter: blur(2rem);}
-.dark .fancybox__backdrop {background: rgba(24, 24, 27, 0.4) !important;backdrop-filter: blur(2rem);}
+.fancybox__backdrop {background: rgb(180 180 180 / 50%) !important;backdrop-filter: blur(2rem);-webkit-backdrop-filter: blur(2em);}
+.dark .fancybox__backdrop {background: rgba(24, 24, 27, 0.4) !important;backdrop-filter: blur(2rem);-webkit-backdrop-filter: blur(2em);}
 .fancybox__toolbar {color: #6a6a6a;text-shadow:none;}
 .dark .fancybox__toolbar {color: var(--fancybox-color, currentColor);}
 .f-button svg {stroke: #6a6a6a;}
