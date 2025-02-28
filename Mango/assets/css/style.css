@@ -389,9 +389,9 @@ html.dark::-webkit-scrollbar-thumb{background:#333;}
 .next_prev_posts .prev_next_box a{display:block;padding:30px 20px;color:#fff;background-size:cover;background-repeat:no-repeat;background-position:center center;}
 .next_prev_posts .prev_next_box a:after{content:'';position:absolute;background-color:rgba(0,0,0,.46);left:0;right:0;top:0;bottom:0;width:100%;height:100%;z-index:0;transition: 0.4s;}
 .nav_previous a,
-.nav_previous a:after {border-radius: 10px 0 0 10px;}
+.nav_previous a:after {border-radius: var(--main-radius) 0 0 var(--main-radius);}
 .nav_next a,
-.nav_next a:after {border-radius: 0 10px 10px 0;}
+.nav_next a:after {border-radius: 0 var(--main-radius) var(--main-radius) 0;}
 .nav_next:hover a:after,
 .nav_previous:hover a:after {background-color: rgba(0, 0, 0, .35);}
 .next_prev_posts .prev_next_box .prev_next_info{z-index:1;position:relative;}
