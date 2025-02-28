@@ -44,7 +44,7 @@ $prev = getAdjacentPost($this, 'prev');
 <style>
   .next_prev_posts .prev_next_box a,
   .next_prev_posts .prev_next_box a:after {
-    border-radius: 10px;
+    border-radius: var(--main-radius);
   }
 </style>
 <?php endif; ?>
