@@ -49,6 +49,8 @@
 <meta name="format-detection" content="email=no">
 <meta name="format-detection" content="address=no">
 <meta name="format-detection" content="date=no">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#212121" media="(prefers-color-scheme: dark)">
 <title><?php
     $this->archiveTitle(array(
       'category'=>_t('%s'),
