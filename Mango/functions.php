@@ -54,8 +54,6 @@ function themeConfig($form) {
 
 // 修改后台设置以适应模板
 function themeInit($archive){
-  // 修改默认头像源
-  define('__TYPECHO_GRAVATAR_PREFIX__', 'https://weavatar.com/avatar/');
   // 将较新的的评论显示在前面
   Helper::options()->commentsOrder = 'DESC';
   // 启用评论分页
@@ -77,6 +75,8 @@ function themeInit($archive){
   }
 }
 
+// 修改默认头像源
+define('__TYPECHO_GRAVATAR_PREFIX__', 'https://weavatar.com/avatar/');
 // 图片压缩
 require_once('inc/core/thumb.php');
 // img 标签处理
