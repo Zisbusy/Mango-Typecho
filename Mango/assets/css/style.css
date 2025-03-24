@@ -431,7 +431,7 @@ html.dark::-webkit-scrollbar-thumb{background:#333;}
 .wznrys h5{font-size:14px;}
 .wznrys h6{font-size:14px;}
 .wznrys ol,
-.wznrys ul{margin-bottom:15px;list-style:disc;}
+.wznrys ul{margin:15px 0;list-style:disc;}
 .wznrys ol li,
 .wznrys ul li{margin-left:24px;line-height:2;}
 .wznrys ol li a,
