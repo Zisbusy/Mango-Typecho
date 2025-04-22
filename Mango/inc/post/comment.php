@@ -76,7 +76,7 @@
         </h3>
         <form action="<?php $this->commentUrl() ?>" method="post" id="commentform" class="comment-form">
           <p class="comment-form-comment">
-            <textarea id="comment" name="text" aria-required="true"></textarea>
+            <textarea id="comment" name="text" aria-required="true" placeholder="留下评论吧..."></textarea>
           </p>
           <?php if($this->user->hasLogin()): ?>
             <div class="hasLogin">
