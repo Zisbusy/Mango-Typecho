@@ -87,13 +87,13 @@
             </div>
           <?php else: ?>
             <p class="comment-form-author">
-              <input id="author" class="blog-form-input" placeholder="昵称" name="author" type="text" value="<?php $this->remember('author'); ?>" size="30">
+              <input id="author" class="blog-form-input" placeholder="昵称" name="author" type="text" autocomplete="author" value="<?php $this->remember('author'); ?>" size="30">
             </p>
             <p class="comment-form-email">
-              <input id="email" class="blog-form-input" placeholder="Email " name="mail" type="text" value="<?php $this->remember('mail'); ?>" size="30">
+              <input id="email" class="blog-form-input" placeholder="Email " name="mail" type="text" autocomplete="email" value="<?php $this->remember('mail'); ?>" size="30">
             </p>
             <p class="comment-form-url">
-              <input id="url" class="blog-form-input" placeholder="网站地址" name="url" type="text" value="<?php $this->remember('url'); ?>" size="30">
+              <input id="url" class="blog-form-input" placeholder="网站地址" name="url" type="text" autocomplete="url" value="<?php $this->remember('url'); ?>" size="30">
             </p>
           <?php endif; ?>
             <p class="form-submit">
