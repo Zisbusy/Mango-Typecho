@@ -36,6 +36,7 @@ function WangAnNum($str) {
 </footer>
 
 <button class="scrollToTopBtn" title="返回顶部"><i class="bi bi-chevron-up"></i></button>
+<script type="text/javascript" src="<?php $this->options->themeUrl('assets/js/jquery.min.js'); ?>" id="jquery-min-js"></script>
 <script type="text/javascript" src="<?php $this->options->themeUrl('assets/js/bootstrap.min.js'); ?>" id="bootstrap-js"></script>
 <script type="text/javascript" src="<?php $this->options->themeUrl('assets/js/fancybox.js'); ?>" id="fancybox-js"></script>
 <script type="text/javascript" src="<?php $this->options->themeUrl('assets/js/js.js'); ?>" id="dsjs-js"></script>
