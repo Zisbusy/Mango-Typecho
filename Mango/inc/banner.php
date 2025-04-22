@@ -39,6 +39,7 @@
           <?php else: ?>
             class=""
           <?php endif; ?>
+          aria-label="<?php echo $index; ?>"
           ></button>
         <?php endforeach; ?>
         </div>
@@ -53,8 +54,8 @@
           </div>
         <?php endforeach; ?>
         </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#banner" data-bs-slide="prev"><i class="bi bi-chevron-left"></i></button>
-      <button class="carousel-control-next" type="button" data-bs-target="#banner" data-bs-slide="next"><i class="bi bi-chevron-right"></i></button>
+      <button class="carousel-control-prev" type="button" data-bs-target="#banner" data-bs-slide="prev" aria-label="上一张"><i class="bi bi-chevron-left"></i></button>
+      <button class="carousel-control-next" type="button" data-bs-target="#banner" data-bs-slide="next" aria-label="下一张"><i class="bi bi-chevron-right"></i></button>
     </div>
   </div>
 </section>
