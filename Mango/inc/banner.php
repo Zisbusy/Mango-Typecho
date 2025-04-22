@@ -46,7 +46,7 @@
         <?php foreach ($parsedData as $index => $item): ?>
           <div class="carousel-item <?php if ($index == 0) {echo 'active';}?>">
             <a class="banlist" href="<?php echo $item['url']; ?>">
-              <img src="<?php echo $item['identifier']; ?>" class="attachment-900x350x1 size-900x350x1 wp-post-image" alt="" decoding="async" loading="lazy">                            
+              <img src="<?php echo $item['identifier']; ?>" class="attachment-900x350x1 size-900x350x1 wp-post-image" alt="<?php echo $item['description']; ?>">                            
               <h2><?php echo $item['description']; ?></h2>
               <i>置顶推荐</i>
             </a>
