@@ -87,8 +87,8 @@
         <!-- PC端左侧 logo-->
         <div class="top_l">
           <h1 class="logo">
-            <a href="/" title="<?php $this->options->title() ?>">
-              <img src="/usr/themes/Mango/assets/img/logo.png" alt="">
+            <a href="/">
+              <img src="/usr/themes/Mango/assets/img/logo.png" alt="logo">
               <b><?php $this->options->title() ?></b>
             </a>
           </h1>
