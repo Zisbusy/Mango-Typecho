@@ -41,7 +41,7 @@
           <!-- 循环输出图片 -->
           <?php foreach ($images as $index =>  $image): ?>
             <a data-fancybox="post-<?php $this->cid() ?>" href="<?php echo $image; ?>">
-              <img src="<?php echo processImage($image,600,600); ?>">
+              <img src="<?php echo processImage($image,600,600); ?>" alt="<?php $this->title() ?>">
               <?php 
                 // 只显示9张图片，超出的标注在最后一张图上。  
                 if ($index == 8 && $imagesNum > 9) {
