@@ -83,7 +83,7 @@
     <div class="container">
       <div class="top">
         <!-- 手机端菜单按钮 -->
-        <button class="mobile_an" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobile_right_nav"><i class="bi bi-list"></i></button>
+        <button class="mobile_an" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobile_right_nav" aria-label="菜单"><i class="bi bi-list"></i></button>
         <!-- PC端左侧 logo-->
         <div class="top_l">
           <h1 class="logo">
@@ -102,7 +102,7 @@
         <!-- PC端右侧 一些按钮-->
         <div class="top_r">
             <div class="top_r_an theme-switch me-4" onclick="switchDarkMode()"><i class="bi bi-lightbulb-fill"></i></div>
-            <button class="top_r_an" type="button" data-bs-toggle="offcanvas" data-bs-target="#c_sousuo"><i class="bi bi-search"></i></button>
+            <button class="top_r_an" type="button" data-bs-toggle="offcanvas" data-bs-target="#c_sousuo" aria-label="搜索"><i class="bi bi-search"></i></button>
         </div>
       </div>
     </div>
