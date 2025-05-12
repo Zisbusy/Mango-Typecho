@@ -62,7 +62,7 @@ html.dark::-webkit-scrollbar-thumb{background:#333;}
 .dark .posts-nav a:hover,
 .dark .posts-nav span:hover{background: #4270f6;}
 .dark .posts-nav .current{background:#4270f6;}
-.dark #comments .comments-title{none;}
+.dark #comments .comments-title{border-bottom: 1px solid #282828;}
 .dark #comments .comment-list li .comment-body{border-bottom:1px solid #282828;}
 .dark #comments form.comment-form .comment-form-comment textarea{background:#191919;color:#ccc;}
 .dark #comments form.comment-form p input{background:#191919;color:#ccc;}
