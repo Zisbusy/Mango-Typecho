@@ -424,8 +424,8 @@ html.dark::-webkit-scrollbar-thumb{background:#333;}
 .wznrys h4,
 .wznrys h5,
 .wznrys h6{margin-bottom:10px;margin-top:20px;line-height:30px;}
-.wznrys h1{font-size:22px;}
-.wznrys h2{font-size:20px;}
+.wznrys h1{font-size:20px;}
+.wznrys h2{font-size:18px;}
 .wznrys h3{font-size:18px;}
 .wznrys h4{font-size:16px;}
 .wznrys h5{font-size:14px;}
