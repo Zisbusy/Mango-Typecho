@@ -430,7 +430,7 @@ html.dark::-webkit-scrollbar-thumb{background:#333;}
 .wznrys h4{font-size:16px;}
 .wznrys h5{font-size:14px;}
 .wznrys h6{font-size:14px;}
-.wznrys h2:before {padding-right: .6rem;content: "I";color: #eb833f;transition: color .18s ease-in-out;}
+.wznrys h2:before{content: "";display: inline-block;width: 3px;height: 15px;background: #eb833f;border-radius: 10px;margin-right: 10px;top: 1px;position: relative;}
 .wznrys ol,
 .wznrys ul{margin:10px 0;list-style:disc;}
 .wznrys ol li,
