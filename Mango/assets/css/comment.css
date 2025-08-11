@@ -19,7 +19,7 @@
 #comments .comment-list li .comment-body .comment-content p{line-height:24px;margin-bottom:0px;}
 #comments .comment-list li .comment-body .reply{position:absolute;right:0px;top:10px;font-size:12px;}
 #comments .comment-list li .comment-body .reply a.comment-reply-link{color:#333;font-weight:300;}
-#comments .comment-list li ol.children{margin-left:50px;}
+#comments .comment-list > li > ol.children{margin-left:50px;}
 #comments .comment-reply-title{font-size:16px;}
 #comments .comment-reply-title small{margin-left:10px;font-size:12px;}
 #comments .comment-reply-title small a{color:#717171;font-weight:300;}
@@ -82,3 +82,4 @@
 #commentform .hasLogin svg {width: 15px;height: 15px;fill: #636363;}
 .dark #comments .hasLogin {background: #191919;}
 #comments .ownerId{color: #4166f2;margin: 0 2px;}
+
