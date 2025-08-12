@@ -436,7 +436,7 @@ html.dark::-webkit-scrollbar-thumb{background:#333;}
 .wznrys ol li,
 .wznrys ul li{margin-left:24px;line-height:2;}
 .wznrys p img{max-width:100%;height:auto}
-.wznrys blockquote{margin:15px 0px;position:relative;border-radius:4px;font-size:inherit;padding:10px 20px 10px 20px;background-color:#f9f9f9;word-break:break-all;overflow-wrap:break-word;}
+.wznrys blockquote{margin:15px 0px;position:relative;border-radius:4px;font-size:inherit;padding:10px 20px 10px 20px;background-color:#f7f7f7;word-break:break-all;overflow-wrap:break-word;}
 .wznrys blockquote p{padding:0px 0px 5px 0px;font-weight:bold;font-size:16px;font-style:inherit;}
 .wznrys blockquote cite{padding-bottom:20px;display:flex;font-size:14px;line-height:2;font-style:inherit;}
 .dark .wznrys blockquote{background-color:#29292a;}
