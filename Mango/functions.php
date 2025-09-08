@@ -31,7 +31,7 @@ function themeConfig($form) {
   $form->addInput($WangAn);
 
   /* 缩略图配置选项 */
-  if(function_exists('gd_info')){
+  if(function_exists('gd_info') && function_exists('imagewebp')){
     $thumbOption = new Typecho_Widget_Helper_Form_Element_Radio('thumbOption',
     array(true => '开启',false => '关闭',),
     false, _t('生成缩略图'), _t('为文章列表与文章里图片生成小尺寸的缩略图，可显著提高加载速度，节省服务器带宽。<br /><b>注意： 首次访问时会生成缩略图，加载时间可能较长。请提前创建 usr/thumb 文件夹。</b>'));
@@ -39,7 +39,7 @@ function themeConfig($form) {
   }else {
     $thumbOption = new Typecho_Widget_Helper_Form_Element_Radio('thumbOption',
     array(false => '关闭',),
-    false, _t('生成缩略图'), _t('PHP 环境缺少 GD 库，无法开启缩略图功能。'));
+    false, _t('生成缩略图'), _t('PHP 环境缺少 GD 库或 Webp，无法开启缩略图功能。'));
     $form->addInput($thumbOption);
   }
   
