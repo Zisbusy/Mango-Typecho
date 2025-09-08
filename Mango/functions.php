@@ -39,7 +39,7 @@ function themeConfig($form) {
   }else {
     $thumbOption = new Typecho_Widget_Helper_Form_Element_Radio('thumbOption',
     array(false => '关闭',),
-    false, _t('生成缩略图'), _t('PHP 环境缺少 GD 库或 Webp，无法开启缩略图功能。'));
+    false, _t('生成缩略图'), _t('PHP 环境缺少 GD 库或不支持 imagewebp 函数，无法开启缩略图功能。'));
     $form->addInput($thumbOption);
   }
   
