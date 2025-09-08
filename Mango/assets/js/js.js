@@ -93,7 +93,7 @@ $.fn.postLike = function() {
   postLikeNum = parseInt(postLikeNum, 10) + (action === 'do' ? 1 : -1);
   $(this).find(".count").text(postLikeNum);
   // 请求
-  $.post('/likes', {
+  $.post('?likes', {
     cid: $(this).data("id"),
     action: action
   });
