@@ -61,7 +61,7 @@ function themeInit($archive){
   // 评论第一页作为默认显示
   Helper::options()->commentsPageDisplay = 'first';
   // 点赞接口 创建一个路由
-  if ($archive->request->getPathInfo() == "/likes") {
+  if ($archive->request->is("likes")) {
     // 执行函数
     $reValues = likeup($archive->request->cid,$archive->request->action);
     Typecho_Response::getInstance()->setStatus(200)->respond(
