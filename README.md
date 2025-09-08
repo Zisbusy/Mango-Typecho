@@ -16,5 +16,5 @@ likes 记录点赞情况
 Views 记录浏览次数      
 
 ## 环境
-PHP:7 8      
+PHP:7 8（可选-支持GD，Webp）      
 Typecho 1.2、1.3      
