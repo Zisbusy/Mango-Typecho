@@ -341,7 +341,7 @@ html.dark::-webkit-scrollbar-thumb{background:#333;}
 
 /*post_container*/
 .post_container{background:#fff;padding:20px 32px 20px 32px;}
-.post_container img {border-radius: 4px;}
+.post_container img {border-radius: var(--main-radius);}
 .post_container_title{padding:25px 30px 20px 30px;background:#ffffff;border-bottom:2px solid #f7f7f7;border-radius:var(--main-radius) var(--main-radius) 0px 0px;}
 .post_container_title h1{font-size:20px;margin-bottom:0px;}
 .post_container_title p{margin:15px 0px 0px 0px;font-size:12px;}
@@ -436,7 +436,7 @@ html.dark::-webkit-scrollbar-thumb{background:#333;}
 .wznrys ol li,
 .wznrys ul li{margin-left:24px;line-height:2;}
 .wznrys p img{max-width:100%;height:auto}
-.wznrys blockquote{margin:15px 0px;position:relative;border-radius:4px;font-size:13px;padding:10px 20px 10px 20px;background-color:#f7f7f7;word-break:break-all;overflow-wrap:break-word;}
+.wznrys blockquote{margin:15px 0px;position:relative;border-radius:var(--main-radius);font-size:13px;padding:10px 20px 10px 20px;background-color:#f7f7f7;word-break:break-all;overflow-wrap:break-word;}
 .wznrys blockquote p{padding:0px 0px 5px 0px;font-weight:bold;font-size:16px;font-style:inherit;}
 .wznrys blockquote cite{padding-bottom:20px;display:flex;font-size:14px;line-height:2;font-style:inherit;}
 .dark .wznrys blockquote{background-color:#29292a;}
@@ -450,7 +450,7 @@ html.dark::-webkit-scrollbar-thumb{background:#333;}
 .wznrys a:hover{color: #3ca5f6;transition-duration: 0.3s;}
 .wznrys strong{font-weight:bold;}
 .wznrys .crayon-table tr:nth-child(odd){background:none;}
-.wznrys pre {position: relative;margin: 15px 0px;padding: 38px 15px 10px 15px;border-radius: 4px;background-color: #f7f7f7;word-break: break-all;overflow-wrap: break-word;font-size: .875em;}
+.wznrys pre {position: relative;margin: 15px 0px;padding: 38px 15px 10px 15px;border-radius: var(--main-radius);background-color: #f7f7f7;word-break: break-all;overflow-wrap: break-word;font-size: .875em;}
 .dark .wznrys pre {background-color: #29292a;}
 .wznrys pre:before{content:"";position:absolute;border-radius:50%;background:#fc625d;width:12px;height:12px;left:14px;top:12px;box-shadow:20px 0 #fdbc40,40px 0 #35cd4b;z-index:2;}
 .wznrys pre code {display: block;overflow: auto;font-size:13px;scrollbar-width: none;-ms-overflow-style: none;}
