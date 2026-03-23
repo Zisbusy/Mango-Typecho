@@ -40,21 +40,21 @@ function likeup($cid, $action){
   $message = "错误参数";
   
   // 如果没有点赞过,且执行的点赞操作。
-  if (!in_array($cid, $cookie) && $action == "do") {
+  if (!in_array($cid, $cookie) && $action == "like") {
     // 给数据值加1
     $db->query($db->update('table.contents')->rows(array('likes' => (int)$num + 1))->where('cid = ?', $cid));
     // 设置已经点赞的cookie，将当前文章 ID 添加到 Cookie 中
     array_push($cookie, $cid);
     $status = "success";
-    $message = "do";
+    $message = "like";
   }
-  if (in_array($cid, $cookie) && $action == "undo") {
+  if (in_array($cid, $cookie) && $action == "unlike") {
     // 给数据值减1
     $db->query($db->update('table.contents')->rows(array('likes' => (int)$num - 1))->where('cid = ?', $cid));
     // 删除取消点赞的cookie，从数组中移除当前文章 ID
     $cookie = array_diff($cookie, array($cid));
     $status = "success";
-    $message = "undo";
+    $message = "unlike";
   }
   
   // 设置Cookie，有效期为一年
