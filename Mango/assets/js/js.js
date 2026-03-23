@@ -89,11 +89,12 @@ ds_mainmenu('.header-menu-ul');
 // 点赞
 $.fn.postLike = function() {
   let postLikeNum = $(this).find(".count").text();
-  let action = $(this).toggleClass('done').hasClass('done') ? 'do' : 'undo';
-  postLikeNum = parseInt(postLikeNum, 10) + (action === 'do' ? 1 : -1);
+  let action = $(this).toggleClass('done').hasClass('done') ? 'like' : 'unlike';
+  postLikeNum = parseInt(postLikeNum, 10) + (action === 'like' ? 1 : -1);
   $(this).find(".count").text(postLikeNum);
   // 请求
-  $.post('?likes', {
+  $.post('/', {
+    type: 'like',
     cid: $(this).data("id"),
     action: action
   });
