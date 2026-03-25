@@ -91,4 +91,6 @@ require_once('inc/core/like.php');
 require_once('inc/core/avatar.php');
 // 评论过滤
 require_once('inc/core/filter.php');
+// 评论回复添加@
+require_once('inc/core/commentAt.php');
 ?>
