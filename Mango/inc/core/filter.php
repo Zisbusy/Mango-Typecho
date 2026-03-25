@@ -3,7 +3,7 @@
 function contentFilter($content) {
   $content = trim(strip_tags($content));
   if (empty($content)) {
-    return "违规（已过滤）";
+    return "违规评论（已过滤）";
   }
   return $content; 
 }
