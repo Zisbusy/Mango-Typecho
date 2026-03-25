@@ -30,6 +30,10 @@ function themeConfig($form) {
   $WangAn = new Typecho_Widget_Helper_Form_Element_Text('WangAn', NULL,NULL, _t('公安备案号'), _t('备案号（不填写时隐藏）'));
   $form->addInput($WangAn);
 
+  // 自定义CSS
+  $CustomCSS = new Typecho_Widget_Helper_Form_Element_Textarea('CustomCSS', null, null, _t('自定义 CSS'), _t('可以方便的自定义博客样式，避免修改源码影响主题模板迭代。(请编写完整的style标签)'));
+  $form->addInput($CustomCSS);
+
   /* 缩略图配置选项 */
   if(function_exists('gd_info') && function_exists('imagewebp')){
     $thumbOption = new Typecho_Widget_Helper_Form_Element_Radio('thumbOption',
