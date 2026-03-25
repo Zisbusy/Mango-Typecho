@@ -74,6 +74,8 @@
 <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/css/fancybox.css'); ?>" type="text/css" media="all">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/bifont/bootstrap-icons.css'); ?>" type="text/css" media="all">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('assets/css/style.css'); ?>" type="text/css" media="all">
+<!-- 自定义 CSS 代码 -->
+<?php $this->options->CustomCSS();?>
 </head>
 
 <body>
