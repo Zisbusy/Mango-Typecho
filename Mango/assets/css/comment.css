@@ -17,6 +17,7 @@
 #comments .comment-list li .comment-body .comment-meta .comment-metadata .edit-link .comment-edit-link{}
 #comments .comment-list li .comment-body .comment-content{position:relative;padding:0px 20px 1px 56px;}
 #comments .comment-list li .comment-body .comment-content p{line-height:24px;margin-bottom:0px;}
+#comments .comment-list li .comment-body .comment-content p a{color: #c9c9c9;}
 #comments .comment-list li .comment-body .reply{position:absolute;right:0px;top:10px;font-size:12px;}
 #comments .comment-list li .comment-body .reply a.comment-reply-link{color:#333;font-weight:300;}
 #comments .comment-list > li > ol.children{margin-left:50px;}
