@@ -17,7 +17,6 @@
 #comments .comment-list li .comment-body .comment-meta .comment-metadata .edit-link .comment-edit-link{}
 #comments .comment-list li .comment-body .comment-content{position:relative;padding:0px 20px 1px 56px;}
 #comments .comment-list li .comment-body .comment-content p{line-height:24px;margin-bottom:0px;}
-#comments .comment-list li .comment-body .comment-content p a{color: #c9c9c9;}
 #comments .comment-list li .comment-body .reply{position:absolute;right:0px;top:10px;font-size:12px;}
 #comments .comment-list li .comment-body .reply a.comment-reply-link{color:#333;font-weight:300;}
 #comments .comment-list > li > ol.children{margin-left:50px;}
@@ -74,6 +73,7 @@
 .dark #comments input:-webkit-autofill {transition:background-color 5000s ease-in-out 0s;-webkit-text-fill-color: #ccc;}
 .dark #comments .comments-nav span,.dark #comments .comments-nav a{background: #2a2a2b;color: #fff;}
 .dark #comments .comments-nav a:hover,.dark #comments .comments-nav span:hover {background: #4270f6;color: #fff;}
+.dark #comments .comment-list li .comment-body .comment-content p a{color: #c9c9c9;}
 .commentsTip{margin: 30px 0;}
 .commentsTip svg{display: block;margin: 0 auto;max-height: 120px;}
 .commentsTip p{color: #dbdbdb;text-align: center;margin-bottom: 20px;}
