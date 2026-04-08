@@ -463,12 +463,11 @@ html.dark::-webkit-scrollbar-thumb{background:#333;}
 .wznrys figcaption{font-size:12px;font-weight:300;margin:15px 0px!important;text-align:center;}
 .wznrys figure.wp-block-video video{width:100%;}
 .wznrys .wp-block-gallery figcaption{margin:0!important;}
-.wznrys .wp-block-table{}
-.wznrys .wp-block-table table{border:1px solid #e9e9e9;font-size:14px;margin-bottom:20px;border-right:none;border-bottom:none;}
-.wznrys .wp-block-table table{}
-.wznrys .wp-block-table table tr{border-bottom:1px solid #e7e7e7;}
-.wznrys .wp-block-table table tr td,
-.wznrys .wp-block-table table tr th{padding:12px 20px;border-right:1px solid #e7e7e7;}
+.wznrys table {width: 100%;border-collapse: separate;table-layout: fixed;border: 1px dashed #eaeaea;border-radius: var(--main-radius);border-spacing: 6px;color: #3b3b3b;text-align: center;word-break: keep-all;}
+.wznrys table>:not(caption)>*>* {padding: .4rem .4rem;border: none;border-radius: var(--main-radius);word-wrap: break-word;}
+.wznrys table thead {background-color: #f7f7f7;border-radius: var(--main-radius);}
+.dark .wznrys table {border: 1px dashed #2c2c2c;color: #c9c9c9;}
+.dark .wznrys table thead {background-color: #29292a;}
 .wznrys .wp-block-audio{margin-bottom:40px;}
 .wznrys .wp-block-cover{margin-bottom:40px;}
 .wznrys .wp-block-cover .wp-block-cover__inner-container{margin:0px 10%;}
