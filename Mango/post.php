@@ -18,6 +18,8 @@
         <div class="post_container">
           <article class="wznrys">
             <?php echo wrapImagesInLinks(setLinks($this->content),$this->title); ?>
+            <!-- 支付插件 -->
+            <?php echo Typecho_Plugin::exists('TyPay') ? TyPay_Plugin::getTyPay() : ''; ?>
           </article>
           <!-- 标签 -->
           <?php $this->need('inc/tag.php'); ?>
