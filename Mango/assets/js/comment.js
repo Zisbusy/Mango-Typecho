@@ -51,10 +51,14 @@ function ajaxComment() {
   function commentCounts() {
     // 文章头部
     let postTitle = document.querySelectorAll(".post_container_title span")[2];
-    postTitle.innerHTML = '<i class="bi bi-chat-square-text"></i>' + (parseInt(postTitle.innerText, 10)+1);
+    if (postTitle) {
+      postTitle.innerHTML = '<i class="bi bi-chat-square-text"></i>' + (parseInt(postTitle.innerText, 10) + 1);
+    }
     // 文章底部
     let postAutho = document.querySelector(".post_author_icon a");
-    postAutho.innerHTML = '<i class="bi bi-chat-square-dots-fill"></i>' + (parseInt(postAutho.innerText, 10)+1);
+    if (postAutho) {
+      postAutho.innerHTML = '<i class="bi bi-chat-square-dots-fill"></i>' + (parseInt(postAutho.innerText, 10)+1);
+    }
     // 评论头部
     let smallTag = $(".comments-title small")
     let newNumber = parseInt(smallTag.text().match(/\d+/)[0]) + 1;
